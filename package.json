@@ -1,7 +1,7 @@
 {
   "name": "hf-frontend-starter-kit",
   "version": "0.0.0",
-  "description": "Building the frontend ui on the components",
+  "description": "The Hypefactory frontend starter kit for frontend work.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

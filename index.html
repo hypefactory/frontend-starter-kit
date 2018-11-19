@@ -7,11 +7,60 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Frontend Starter Kit</title>
 
-    <link rel="stylesheet" href="dist/css/styles.css">
+  <link rel="stylesheet" href="dist/css/styles.css">
 
   <!--[if lt IE 8]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
+
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+        main {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .welcome-section {
+            text-align: center;
+            max-width: 50%;
+
+        }
+        .title {
+            font-size: 52px;
+            font-weight: 300;
+            line-height: 1;
+            margin: 0;
+            padding: 10px;
+        }
+
+        h2 {
+            display: inline-block;
+            padding: .25em .4em;
+            font-weight: 700;
+            line-height: 1;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: baseline;
+            border-radius: .25rem;
+            color: #fff;
+            background-color: #111;
+            margin: 0 0 20px 0;
+        }
+
+        p {
+
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -19,10 +68,10 @@
     </header>
 
     <main>
-        <section class="homepage-section"></section>
-
-        <section class="homepage-section">
-            <div class="promo"></div>
+        <section class="welcome-section">
+            <h1 class="title">Starter Kit</h1>
+            <h2>Frontend</h2><br>
+            <p>To get started, edit the <strong>index.html</strong> and delete this welcome section and the inline css.</p>
         </section>
     </main>
 
