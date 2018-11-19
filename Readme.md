@@ -29,11 +29,27 @@ frontend-starter-kit
     │   ├── _components 
     │   ├── _mixins
     │   │   ├── _source
-    │   │   │   └── unitize.scss
+    │   │   │   ├── animation.scss
+    │   │   │   ├── appearance.scss
+    │   │   │   ├── backface-visibility.scss
+    │   │   │   ├── border-radius.scss
+    │   │   │   ├── hyphens.scss
+    │   │   │   ├── keyframe.scss
+    │   │   │   ├── linear-gradient.scss
+    │   │   │   ├── rotate.scss
+    │   │   │   ├── scale.scss
+    │   │   │   ├── tap-highlight-color.scss
+    │   │   │   ├── touch-callout.scss
+    │   │   │   ├── transform.scss
+    │   │   │   ├── transition.scss
+    │   │   │   ├── translate.scss
+    │   │   │   ├── unitize.scss        
+    │   │   │   └── user-select.scss
     │   │   └── source.scss
     │   ├── _modules
     │   │   └── global.scss
     │   ├── _variables
+    │   │   ├── breakpoints.scss
     │   │   ├── colors.scss
     │   │   └── typography.scss
     │   ├── all.scss
@@ -43,8 +59,20 @@ frontend-starter-kit
     │   ├── modules.scss
     │   └── variables.scss
     └── js/
+        ├── plugins/
+        │   ├── jquery.cookie-permission.js
+        │   ├── jquery.form-polyfill.js
+        │   └── jquery.scroll.js
+        ├── vendor/
+        │   │   ├── jquery/
+        │   │   │   ├── jquery.event.move.js
+        │   │   │   ├── jquery.event.swipe.js
+        │   │   │   └── jquery.transit.js
+        │   │   └── modernizr.custom.35977.min.js               
         ├── jquery.plugin-base.js
-        └── jquery.statemanager.js
+        ├── jquery.starter-kit.js
+        ├── jquery.statemanager.js
+        └── jquery.storagemanager.js
 ```
 
 We provide compiled CSS and JS (`frontend-starter-kit.*`), as well as compiled and minified CSS and JS (`frontend-starter-kit.min.*`). [source maps](https://developers.google.com/web/tools/chrome-devtools/debug/readability/source-maps) (`frontend-starter-kit.*.map`) are available for use with certain browsers' developer tools.
