@@ -1,0 +1,46 @@
+/*
+Transform mixin
+==============================================
+The mixins provides you a cross-browser compatible method to set a transformation.
+Please refer to <http://caniuse.com/transforms2d> to see the browser support table of the feature.
+######Example:
+`@include transform([value]);`
+`$param: {String} properties: The transformation(s) that should be applied`
+*/
+
+@mixin transform($transformation){
+  -webkit-transform: $transformation;
+  transform: $transformation;
+}
+
+/*
+Transform style mixin
+======================================
+The mixins provides you a cross-browser compatible method to set a transformation style.
+Please refer to <http://caniuse.com/transforms3d> to see the browser support table of the feature.
+######Example:
+`@include transform-style([value]);`
+`$param {String} Style The style you want for your transformation (Default: preserve-3d)`
+*/
+
+@mixin transform-style($style: preserve-3d){
+  -webkit-transform-style: $style;
+  transform-style: $style;
+}
+
+/*
+Transform origin mixin
+======================================
+The mixins provides you a cross-browser compatible method to set the transform origin position.
+Please refer to <http://caniuse.com/transforms2d> to see the browser support table of the feature.
+######Example:
+`@include transform-origin([x-value],[y-value],[z-value]);`
+`$param: x: Sets the origin position on the x axis (Default: 50%)`<br/>
+`$param: y: Sets the origin position on the y axis (Default: 50%)`<br/>
+`$param: z: Sets the origin position on the z axis (Default: 0)`
+*/
+
+@mixin transform-origin($x: 50%, $y: 50%, $z: 0){
+  -webkit-transform-origin: $x $y $z;
+  transform-origin: $x $y $z;
+}

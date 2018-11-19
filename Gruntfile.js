@@ -13,10 +13,6 @@ module.exports = function(grunt) {
         // Store your Package file so you can reference its specific data whenever necessary
         pkg: grunt.file.readJSON('package.json'),
 
-        copy: {
-
-        },
-
         sass: {
             dev: {
                 options: {
@@ -40,11 +36,48 @@ module.exports = function(grunt) {
            }
         },
 
+        concat: {
+            js: {
+                src: [
+                    vendors.modenizer,
+                    vendors.jquery,
+                    vendors["jquery.event.move"],
+                    vendors["jquery.event.swipe"],
+                    vendors["jquery.transit"],
+
+                    'src/js/jquery.plugin-base.js',
+                    'src/js/jquery.statemanager.js',
+                    'src/js/jquery.storagemanager.js',
+
+                    'src/js/plugins/**/*.js',
+
+                    'src/js/jquery.starter-kit.js',
+                ],
+                dest: 'dist/js/app.js'
+            }
+        },
+
+        uglify: {
+            dist: {
+                files:{
+                    'dist/js/app.min.js': ['dist/js/app.js']
+                },
+            }
+        },
+
         // Run: `grunt watch` from command line for this section to take effect
         watch: {
             scss: {
                 files: 'src/scss/**/*.scss',
                 tasks: 'default'
+            },
+            scripts: {
+                files: 'src/js/**/*.js',
+                tasks: [ 'uglify'],
+                options: {
+                    spawn: false,
+                    livereload: true
+                },
             },
             livereload: {
                 options: {
@@ -78,9 +111,11 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-browser-sync');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-concat');
 
     // Default Task
-    grunt.registerTask('default', ['sass:dev']);
+    grunt.registerTask('default', ['sass:dev', 'concat', 'uglify']);
 
     // Watch task
     grunt.registerTask('watch', ["browserSync", "watch"]);
