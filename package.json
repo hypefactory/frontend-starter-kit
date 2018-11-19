@@ -1,12 +1,27 @@
 {
   "name": "hf-frontend-starter-kit",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "This is a boilerplate repository for building frontend user interfaces.",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [
+    "css",
+    "sass",
+    "mobile-first",
+    "responsive",
+    "frontend",
+    "ui"
+  ],
+  "homepage": "https://hypefactory.de/",
   "author": "Brian Schäffner <brian.s@hypefactory.de>",
+  "style": "dist/css/style.css",
+  "sass": "src/scss/all.scss",
+  "main": "dist/js/frontend-starter-kit",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hypefactory/frontend-starter-kit.git"
+  },
   "license": "MIT",
   "devDependencies": {
     "grunt": "^1.0.3",
