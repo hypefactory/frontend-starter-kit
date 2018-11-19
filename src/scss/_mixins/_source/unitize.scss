@@ -1,0 +1,86 @@
+/**
+Unitize mixin
+================================================
+The unitize mixins converts values from px-units to the relative rem-units, providing all the benefits of units like em and rem, without you having to do any calculations yourself.
+######Syntax:
+`$property` = the property that should be unitized.<br/>
+`$value` = pixel-value<br/>
+`$baseValue` (optional) = default browser font-size ($remScaleFactor in most cases)<br/>
+######Example Unitize mixin with custom property
+`@include unitize($property, $value);`<br/>
+`@include unitize(font-size, 16);`
+######Specific built-in functions
+In addition to the general `.unitize()` mixin, Shopware contains specific mixins to quickly calculate values which (for example) have more than one property.<br/>
+<br/>
+`.unitize-height($value)`<br/>
+`.unitize-width($value)`<br/>
+`.unitize-max-height($value)`<br/>
+`.unitize-max-width($value)`<br/>
+`.unitize-min-width($value)`<br/>
+`.unitize-padding($topValue, $rightValue: $topValue, $bottomValue: $topValue, $leftValue: $rightValue)`<br/>
+`.unitize-margin($topValue, $rightValue: $topValue, $bottomValue: $topValue, $leftValue: $rightValue)`<br/>
+`.unitize-variable($value)`<br/>
+*/
+
+// New default unitize mixin which should be called like ```@include unitize(height, 200);```
+@mixin unitize($property, $value, $baseValue: $remScaleFactor) {
+    @if type-of($property) == 'string' and type-of($value) == 'number' and type-of($baseValue) == 'number' {
+        $pxValue: $value;
+        $remValue: ($value / $baseValue);
+        #{$property}: #{$pxValue}px;
+        #{$property}: #{$remValue}rem;
+    }
+}
+
+@mixin unitize-multiple($topValue, $rightValue: $topValue, $bottomValue: $topValue, $leftValue: $rightValue, $baseValue: $remScaleFactor, $property: padding){
+    $pxTopValue: $topValue;
+    $emTopValue: ($topValue / $baseValue);
+
+    $pxRightValue: $rightValue;
+    $emRightValue: ($rightValue / $baseValue);
+
+    $pxBottomValue: $bottomValue;
+    $emBottomValue: ($bottomValue / $baseValue);
+
+    $pxLeftValue: $leftValue;
+    $emLeftValue: ($leftValue / $baseValue);
+
+    #{$property}: #{$pxTopValue}px #{$pxRightValue}px #{$pxBottomValue}px #{$pxLeftValue}px;
+    #{$property}: #{$emTopValue}rem #{$emRightValue}rem #{$emBottomValue}rem #{$emLeftValue}rem;
+}
+
+@mixin unitize-height($value, $baseValue: $remScaleFactor){
+    @include unitize(height, $value, $baseValue);
+}
+
+@mixin unitize-width($value, $baseValue: $remScaleFactor){
+    @include unitize(width, $value, $baseValue);
+}
+
+@mixin unitize-max-height($value, $baseValue: $remScaleFactor){
+    @include unitize(max-height, $value, $baseValue);
+}
+
+@mixin unitize-min-height($value, $baseValue: $remScaleFactor){
+    @include unitize(min-height, $value, $baseValue);
+}
+
+@mixin unitize-max-width($value, $baseValue: $remScaleFactor){
+    @include unitize(max-width, $value, $baseValue);
+}
+
+@mixin unitize-min-width($value, $baseValue: $remScaleFactor){
+    @include unitize(min-width, $value, $baseValue);
+}
+
+@mixin unitize-margin($topValue, $rightValue: $topValue, $bottomValue: $topValue, $leftValue: $rightValue, $baseValue: $remScaleFactor){
+    @include unitize-multiple($topValue, $rightValue, $bottomValue, $leftValue, $baseValue, margin);
+}
+
+@mixin unitize-padding($topValue, $rightValue: $topValue, $bottomValue: $topValue, $leftValue: $rightValue, $baseValue: $remScaleFactor){
+    @include unitize-multiple($topValue, $rightValue, $bottomValue, $leftValue, $baseValue, padding);
+}
+
+@mixin unitize-variable($value, $baseValue: $remScaleFactor){
+    $emValue: ($value / $baseValue);
+}

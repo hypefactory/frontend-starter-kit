@@ -1,0 +1,22 @@
+{
+  "name": "hf-frontend-starter-kit",
+  "description": "Building the frontend ui on the components",
+  "main": "index.js",
+  "authors": [
+    "Brian Schäffner <brian.s@hypefactory.de>"
+  ],
+  "license": "MIT",
+  "homepage": "hypefactory.de",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "modernizr": "^3.6.0",
+    "normalize-scss": "^3.0.3"
+  }
+}

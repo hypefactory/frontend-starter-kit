@@ -1,0 +1,33 @@
+# OS generated files
+.cache
+.DS_Store
+.DS_Store?
+._*
+.project
+.settings
+.tmproj
+*.esproj
+*.sublime-project
+*.sublime-workspace
+nbproject
+.Spotlight-V100
+.Trashes
+./Icon?
+ehthumbs.db
+Thumbs.db
+
+# SASS/SCSS cache
+.sass-cache/
+
+# PhpStorm-Project
+/.idea/
+
+# bower
+/bower_components/
+
+# nodejs
+/node_modules/
+package-lock.json
+
+# dist folder
+/dist/
