@@ -1,5 +1,5 @@
 <p align="center">
-  <h3 align="center">[Starter Kit - Frontend](https://hypefactory.de/)</h3>
+  <h3 align="center"><a href="https://hypefactory.de/">Starter Kit - Frontend</a></h3>
 
   <p align="center">
     Sleek, intuitive, and powerful front-end boilerplate for faster and easier ui development.
