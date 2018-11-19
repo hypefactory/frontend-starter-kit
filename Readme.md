@@ -6,7 +6,6 @@
     <br>
     Starter Kit Frontend - is a boilerplate repository for building frontend user interfaces.
     <br>
-    ·
     <a href="https://hypefactory.de/">Blog (Cooming soon)</a>
   </p>
 </p>
