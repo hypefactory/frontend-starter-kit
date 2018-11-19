@@ -1,6 +1,6 @@
 {
   "name": "hf-frontend-starter-kit",
-  "description": "Building the frontend ui on the components",
+  "description": "This is a boilerplate repository for building frontend user interfaces.",
   "main": "index.js",
   "authors": [
     "Brian Schäffner <brian.s@hypefactory.de>"
