@@ -1,11 +1,10 @@
-# [Starter Kit - Frontend](https://hypefactory.de/)
-Starter Kit Frontend - is a boilerplate repository for building frontend user interfaces.
-
 <p align="center">
-  <h3 align="center">Frontend Starter Kit</h3>
+  <h3 align="center">[Starter Kit - Frontend](https://hypefactory.de/)</h3>
 
   <p align="center">
     Sleek, intuitive, and powerful front-end boilerplate for faster and easier ui development.
+    <br>
+    Starter Kit Frontend - is a boilerplate repository for building frontend user interfaces.
     <br>
     ·
     <a href="https://hypefactory.de/">Blog (Cooming soon)</a>
