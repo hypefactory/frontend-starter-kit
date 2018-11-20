@@ -3,3 +3,37 @@ $brand-secondary: #5F7285;
 $text-color: #111;
 $text-color-dark: #000;
 $body-bg: #fff;
+
+$highlight-success: #2ECC71;
+$highlight-error: #E74C3C;
+$highlight-notice: #F1C40F;
+$highlight-info: #4AA3DF;
+
+/**
+ * Button
+ */
+$btn-icon-size: 10;
+$btn-default-top-bg: #FFFFFF;
+$btn-default-bottom-bg: #F5F5F8;
+$btn-default-hover-bg: #FFFFFF;
+$btn-default-text-color: $text-color;
+$btn-default-hover-text-color: $brand-primary;
+$btn-primary-top-bg: $brand-primary;
+$btn-primary-bottom-bg: $brand-primary;
+$btn-primary-hover-bg: $brand-primary;
+$btn-primary-text-color: #FFFFFF;
+$btn-primary-hover-text-color: $btn-primary-text-color;
+$btn-secondary-top-bg: $brand-primary;
+$btn-secondary-bottom-bg: $brand-secondary;
+$btn-secondary-hover-bg: $brand-secondary;
+$btn-secondary-text-color: #FFFFFF;
+$btn-secondary-hover-text-color: $btn-secondary-text-color;
+
+/**
+ * Table
+ */
+$table-row-bg: #FFFFFF;
+$table-row-color: $brand-secondary;
+$table-row-highlight-bg: darken($table-row-bg, 4%);
+$table-header-bg: $brand-secondary;
+$table-header-color: #FFFFFF;

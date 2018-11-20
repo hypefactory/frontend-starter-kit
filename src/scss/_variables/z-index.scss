@@ -1,0 +1,65 @@
+/*
+Z-Index
+================================
+The z-index variables list all different values for the z-index layers used inside the Shopware responsive theme.
+*/
+
+// === COMPONENTS ===
+
+// badge.less
+$zindex-badge: 500;
+
+// checkbox.less
+$zindex-checkbox-state: 60;
+$zindex-checkbox-element: 65;
+
+// collapse.less
+$zindex-collapse-content: 1000;
+$zindex-collapse-header: 1100;
+$zindex-collapse-content-collapsed: 1200;
+$zindex-collapse-header-active: 1300;
+
+// image-gallery.less
+$zindex-image-gallery-button: 1;
+
+// image-slider.less
+$zindex-image-slider: 1000;
+$zindex-image-slider-arrow: 1000;
+
+// loading-indicator.less
+$zindex-loading-indicator: 6000;
+
+// menu-scroller.less
+$zindex-menu-scroller-arrow: 750;
+
+// modal.less
+$zindex-modalbox: 7000;
+
+// offcanvas-menu.less
+$zindex-offcanvas: 8000;
+$zindex-offcanvas-higher-viewport: 1000;
+
+// overlay.less
+$zindex-overlay: 5000;
+
+// panel.less
+$zindex-panel-arrow: 2000;
+$zindex-panel-link: 2000;
+
+// product-slider.less
+$zindex-product-slider: 750;
+
+// === MODULES ===
+
+// configurator.less
+
+// footer.less
+$zindex-footer-newsletter-field-focus: 1;
+
+// header.less
+$zindex-header-search-form: 3000;
+$zindex-header-search-button: 2;
+$zindex-header-search-results: 3500;
+$zindex-header-language-flag: 900;
+$zindex-header-service-list: 3500;
+$zindex-header-navigation-dropdown: 3500;

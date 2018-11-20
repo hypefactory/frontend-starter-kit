@@ -5,10 +5,10 @@ The variables define the sizes and weights for typographic elements.
 The values can be changed with the backend theme manager.
 */
 
-
 $font-size-base: 14;
 $font-base-weight: 500;
 $font-light-weight: 300;
+$font-bold-weight: 700;
 $font-base-stack: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 $font-headline-stack: $font-base-stack;
 
