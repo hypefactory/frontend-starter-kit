@@ -9,13 +9,18 @@ Please refer to <http://caniuse.com/css-boxshadow> to see the browser support ta
 `$param: {Number} y: Offset to the y axis (Default: 0)`<br/>
 `$param: {Number} blur: Bluring radius (Default: 1px)`<br/>
 `$param: {String} color: Color of the shadow (Default: #000)`<br/>
+0 0 5px 0 rgba(0, 0, 0, 0.2)
 */
 
-@mixin box-shadow($shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2)){
+@mixin box-shadow($shadow...){
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
   box-shadow: $shadow;
 }
 
 @mixin reset-box-shadow(){
   $shadow: 0 0 0 transparent;
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
   box-shadow: $shadow;
 }

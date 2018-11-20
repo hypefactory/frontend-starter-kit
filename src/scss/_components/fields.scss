@@ -30,10 +30,10 @@ input[type="tel"] {
   @include border-radius();
   @include box-sizing();
   @include unitize(line-height, 19);
-  @include unitize($input-font-size, 16, font-size);
+  @include unitize($font-size-base, 16, font-size);
   @include unitize-width(290);
   @include unitize-padding(10, 10, 9, 10);
-  @include box-shadow(inset 0 1px 1px $gray-dark);
+  @include box-shadow(inset 0 1px 1px #F5F5F8);
   background: $input-bg;
   border: 1px solid $input-border;
   border-top-color: darken($input-border, 5%);
@@ -92,8 +92,8 @@ textarea {
 }
 
 label {
-  @include unitize($label-font-size, 16, font-size);
-  color: $label-color;
+  @include unitize($font-size-base, 16, font-size);
+  color: $text-color;
 }
 
 label.has--error {
@@ -133,7 +133,7 @@ Creates a styled combobox selection for the basic select element.
     @include unitize-padding(0, 40, 0, 10);
     @include unitize(line-height, 40);
     @include border-radius();
-    @include white-gradient();
+    background: #fff;
     height: 100%;
     width: 100%;
     display: block;
@@ -142,7 +142,7 @@ Creates a styled combobox selection for the basic select element.
     overflow: hidden;
     text-overflow: ellipsis;
     text-align: left;
-    border: 1px solid $btn-default-border-color;
+    border: 1px solid $border-color;
 
     option {
       @include unitize-padding(4, 8);
@@ -191,13 +191,13 @@ Creates a styled combobox selection for the basic select element.
     line-height: 40px;
     max-height: 100%;
     display: block;
-    content: $sw-icon-arrow-down;
+    // content: $sw-icon-arrow-down;
     position: absolute;
     right: 0;
     font-size: 5px;
     border-left: 1px solid $border-color;
     text-align: center;
-    font-family: $sw-icon-fontname;
+    // font-family: $sw-icon-fontname;
     pointer-events: none;
 
     &:hover {

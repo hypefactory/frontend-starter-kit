@@ -4,3 +4,16 @@ Components
 The `components.scss` contains the imports to all styled elements of Shopware.
 The files are destinated inside the `_components` folder.
 */
+
+@import '_components/alert';
+@import '_components/badge';
+@import '_components/button';
+@import '_components/card';
+@import '_components/checkbox';
+@import '_components/fields';
+@import '_components/form';
+@import '_components/grid';
+@import '_components/label';
+@import '_components/lists';
+@import '_components/shadow';
+@import '_components/table';

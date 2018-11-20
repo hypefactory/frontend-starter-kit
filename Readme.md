@@ -1,4 +1,8 @@
 <p align="center">
+<a href="https://hypefactory.de/">
+    <img src="starter-kit-frontend.svg" alt="Starter Kit - Frontend logo" width=72 height=72>
+  </a>
+  
   <h3 align="center"><a href="https://hypefactory.de/">Starter Kit - Frontend</a></h3>
 
   <p align="center">

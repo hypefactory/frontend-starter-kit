@@ -3,9 +3,14 @@ $brand-secondary: #5F7285;
 $text-color: #111;
 $text-color-dark: #000;
 $body-bg: #fff;
+$border-color: #111;
 
-$highlight-success: #2ECC71;
-$highlight-error: #E74C3C;
+$success-color: #2ECC71;
+$error-color: #E74C3C;
+$link-color: #0070c9;
+
+$highlight-success: $success-color;
+$highlight-error: $error-color;
 $highlight-notice: #F1C40F;
 $highlight-info: #4AA3DF;
 
@@ -29,9 +34,32 @@ $btn-secondary-hover-bg: $brand-secondary;
 $btn-secondary-text-color: #FFFFFF;
 $btn-secondary-hover-text-color: $btn-secondary-text-color;
 
-/**
- * Table
- */
+// 4. Cards
+// ==========================================================================
+
+$card-padding: 24px !default;
+$card-bg-color: #fff !default;
+$card-link-color: $link-color !default;
+$card-link-color-light: lighten($card-link-color, 20%) !default;
+
+// Input
+// ==========================================================================
+$input-bg: #F5F5F8;
+$input-color: $brand-secondary;
+$input-placeholder-color: lighten($text-color, 15%);
+$input-border: $border-color;
+$input-focus-bg: #FFFFFF;
+$input-focus-border: $brand-primary;
+$input-focus-color: $brand-secondary;
+$input-error-bg: desaturate(lighten($highlight-error, 38%), 20%);
+$input-error-border: $highlight-error;
+$input-error-color: $highlight-error;
+$input-success-bg: #FFFFFF;
+$input-success-border: $highlight-success;
+$input-success-color: $success-color;
+
+// 5. Table
+// ==========================================================================
 $table-row-bg: #FFFFFF;
 $table-row-color: $brand-secondary;
 $table-row-highlight-bg: darken($table-row-bg, 4%);

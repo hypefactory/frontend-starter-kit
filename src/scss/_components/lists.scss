@@ -51,24 +51,28 @@ In addition there are 8 list style types Shopware 5 provides that you can choose
 
   // Default styling for unordered lists
   li {
-    @include icon-element();
-    .unitize(line-height, 24)
+    // @include icon-element();
+    @include unitize(line-height, 24)
   }
 
   // Other list icons
-  &.is--disc li { @include icon-element($sw-icon-cd); }
-  &.is--checked li { @include icon-element($sw-icon-check); }
-  &.is--arrow-right li { @include icon-element($sw-icon-arrow-right, 10); }
-  &.is--star li { @include icon-element($sw-icon-star, 10); }
-  &.is--cross li { @include icon-element($sw-icon-cross); }
-  &.is--tag li { @include icon-element($sw-icon-tag); }
-  &.is--plus li { @include icon-element($sw-icon-plus); }
+  // &.is--disc li { @include icon-element($sw-icon-cd); }
+  // &.is--checked li { @include icon-element($sw-icon-check); }
+  // &.is--arrow-right li { @include icon-element($sw-icon-arrow-right, 10); }
+  // &.is--star li { @include icon-element($sw-icon-star, 10); }
+  // &.is--cross li { @include icon-element($sw-icon-cross); }
+  // &.is--tag li { @include icon-element($sw-icon-tag); }
+  // &.is--plus li { @include icon-element($sw-icon-plus); }
 }
 
-.list--unstyled { list-style: none }
+.list--unstyled {
+  list-style: none;
+}
 
 .list--inline {
   list-style: none;
 
-  li { display: inline }
+  li {
+    display: inline
+  }
 }

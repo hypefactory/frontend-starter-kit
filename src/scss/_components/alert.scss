@@ -105,7 +105,9 @@ Options: `is--success`, `is--info`, `is--warning`, `is--error`.
     @include unitize-padding(10, 10);
     float: left;
 
-    p { .unitize(margin-bottom, 0) }
+    p {
+      @include unitize(margin-bottom, 0)
+    }
   }
 
   // Icon column

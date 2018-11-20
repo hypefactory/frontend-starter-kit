@@ -72,12 +72,12 @@ The checkboxes can be used in a `span` element containing an `input` tag or insi
         @include unitize(line-height, 12);
         @include unitize(font-size, 7);
         display: inline-block;
-        font-family: $sw-icon-fontname;
+        //font-family: $sw-icon-fontname;
         font-weight: $font-base-weight;
         text-align: center;
         vertical-align: top;
         color: #fff;
-        content: $sw-icon-check;
+        // content: $sw-icon-check;
       }
     }
 
@@ -97,12 +97,12 @@ The checkboxes can be used in a `span` element containing an `input` tag or insi
         @include unitize(line-height, 12);
         @include unitize(font-size, 7);
         display: inline-block;
-        font-family: $sw-icon-fontname;
+        // font-family: $sw-icon-fontname;
         font-weight: $font-base-weight;
         text-align: center;
         vertical-align: top;
         color: #fff;
-        content: $sw-icon-check;
+        // content: $sw-icon-check;
       }
     }
   }
