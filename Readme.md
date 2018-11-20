@@ -1,6 +1,6 @@
 <p align="center">
 <a href="https://hypefactory.de/">
-    <img src="https://raw.githubusercontent.com/hypefactory/frontend-starter-kit/master/starter-kit-frontend-logo.svg" alt="Starter Kit - Frontend logo" width=72 height=72>
+    <img src="https://github.com/hypefactory/frontend-starter-kit/blob/master/starter-kit-frontend-logo.svg" alt="Starter Kit - Frontend logo" width=72 height=72>
   </a>
   
   <h3 align="center"><a href="https://hypefactory.de/">Starter Kit - Frontend</a></h3>
