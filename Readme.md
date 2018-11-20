@@ -28,7 +28,7 @@ frontend-starter-kit
     ├── scss/
     │   ├── _components 
     │   ├── _mixins
-    │   │   ├── _source
+    │   │   ├── _core
     │   │   │   ├── animation.scss
     │   │   │   ├── appearance.scss
     │   │   │   ├── backface-visibility.scss
