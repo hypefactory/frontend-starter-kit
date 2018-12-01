@@ -1,0 +1,130 @@
+.tabs {
+  position: relative;
+  background: transparent;
+  width: 100%;
+  border-radius: 4px;
+  box-sizing: border-box;
+  overflow: hidden;
+  z-index: 30;
+
+  // Border
+  .border {
+    position: relative;
+    bottom: 2px;
+    left: 0;
+    background: $text-color;
+    width: auto;
+    height: 2px;
+    transition: left .3s cubic-bezier(0.550, 0.085, 0.680, 0.530);
+    transition-delay: 0.2s;
+    z-index: 90;
+  }
+
+  // Tabs Header
+  &-header {
+    position: relative;
+    background: transparent;
+    overflow: hidden;
+    border-bottom: 2px solid $gray;
+
+    // List
+    ul {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: calc(100% - 68px);
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    // List Item
+    li {
+      transition: 0.3s ease;
+      @include appearance(none);
+
+      &.is--active {
+
+        a {
+          color: $text-color;
+        }
+      }
+    }
+
+    // Anchor
+    a {
+      z-index: 1;
+      display: block;
+      box-sizing: border-box;
+      padding: 15px 20px;
+      color: $brand-primary;
+      font-weight: 400;
+      text-decoration: none;
+      @include appearance(none);
+    }
+  }
+
+  // Tabs Nav
+  &-nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 10px;
+    color: $text-color;
+    user-select: none;
+
+    // Fade
+    &:before {
+      content: '';
+      z-index: 1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      box-shadow: 0 0 20px 10px #fff;
+    }
+
+    // Arrows
+    i {
+      cursor: pointer;
+    }
+  }
+
+  // Tabs Content
+  &-content {
+    position: relative;
+    transition: 0.3s ease;
+    overflow: hidden;
+    @include unitize(font-size, $font-size-base);
+    font-weight: 400;
+    line-height: 1.42861;
+    letter-spacing: -.016em;
+    padding: 28px 0;
+
+    // Blurred Text Effect
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 1px;
+      box-shadow: 0 0 20px 10px #fff;
+    }
+
+    // Tab
+    .tab {
+      display: none;
+
+      // Active
+      &.is--active {
+        display: block;
+      }
+    }
+  }
+}

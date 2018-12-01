@@ -13,15 +13,15 @@ Options: `success`, `info`, `warning`, `error`.
 */
 
 .label {
-  @include unitize-padding(3, 8);
-  @include unitize-margin(0, 5);
-  @include unitize($font-size-base, 16, font-size);
-  @include unitize(line-height, 18);
-  @include border-radius();
+  @include unitize-padding(5, 15);
+  @include unitize-margin(0, 0);
+  @include unitize(font-size, $font-size-base);
+  @include unitize(line-height, $font-size-base + 2);
+  @include border-radius(4px);
   display: inline-block;
   text-align: center;
   white-space: nowrap;
-  color: $text-color;
+  color: $theme-dark--text-color;
   background: $text-color;
 
   &.success {
@@ -38,5 +38,31 @@ Options: `success`, `info`, `warning`, `error`.
 
   &.error {
     background: $highlight-error;
+  }
+
+  &.is--outlined {
+    background: transparent;
+    color: $text-color;
+    border: 1px solid $text-color;
+
+    &.success {
+      color: $highlight-success;
+      border-color: $highlight-success;
+    }
+
+    &.info {
+      color: $highlight-info;
+      border-color: $highlight-info;
+    }
+
+    &.warning {
+      color: $highlight-notice;
+      border-color: $highlight-notice;
+    }
+
+    &.error {
+      color: $highlight-error;
+      border-color: $highlight-error;
+    }
   }
 }

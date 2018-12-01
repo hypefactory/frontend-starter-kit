@@ -6,12 +6,66 @@ module.exports = function(grunt) {
         'modenizer': 'src/js/vendor/modernizr.custom.35977.min.js',
         'jquery.event.move': 'src/js/vendor/jquery/jquery.event.move.js',
         'jquery.event.swipe': 'src/js/vendor/jquery/jquery.event.swipe.js',
-        'jquery.transit': 'src/js/vendor/jquery/jquery.transit.js'
+        'jquery.transit': 'src/js/vendor/jquery/jquery.transit.js',
+        'anime': 'src/js/vendor/anime.js',
+        'picturefill': 'src/js/vendor/picturefill.min.js'
     };
+
+    // show elapsed time at the end
+    require('time-grunt')(grunt);
+    // load all grunt tasks
+    require('load-grunt-tasks')(grunt);
 
     grunt.initConfig({
         // Store your Package file so you can reference its specific data whenever necessary
         pkg: grunt.file.readJSON('package.json'),
+
+        browserSync: {
+            bsFiles: {
+                src : [
+                    './*.html',
+                    './dist/css/**/*.css',
+                    './dist/js/**/*.js'
+                ]
+            },
+            options: {
+                watchTask: true,
+                server: {
+                    baseDir: "./"
+                }
+            }
+        },
+
+        concat: {
+            js: {
+                src: [
+                    vendors.modenizer,
+                    vendors.picturefill,
+                    vendors.jquery,
+                    vendors["jquery.event.move"],
+                    vendors["jquery.event.swipe"],
+                    vendors["jquery.transit"],
+                    vendors.anime,
+
+                    'src/js/jquery.plugin-base.js',
+                    'src/js/jquery.statemanager.js',
+                    'src/js/jquery.storagemanager.js',
+
+                    'src/js/plugins/**/*.js',
+
+                    'src/js/jquery.starter-kit.js',
+                ],
+                dest: 'dist/js/app.js'
+            }
+        },
+
+        uglify: {
+            dist: {
+                files:{
+                    'dist/js/app.min.js': ['dist/js/app.js']
+                },
+            }
+        },
 
         sass: {
             dev: {
@@ -36,76 +90,20 @@ module.exports = function(grunt) {
            }
         },
 
-        concat: {
-            js: {
-                src: [
-                    vendors.modenizer,
-                    vendors.jquery,
-                    vendors["jquery.event.move"],
-                    vendors["jquery.event.swipe"],
-                    vendors["jquery.transit"],
-
-                    'src/js/jquery.plugin-base.js',
-                    'src/js/jquery.statemanager.js',
-                    'src/js/jquery.storagemanager.js',
-
-                    'src/js/plugins/**/*.js',
-
-                    'src/js/jquery.starter-kit.js',
-                ],
-                dest: 'dist/js/app.js'
-            }
-        },
-
-        uglify: {
-            dist: {
-                files:{
-                    'dist/js/app.min.js': ['dist/js/app.js']
-                },
-            }
-        },
-
         // Run: `grunt watch` from command line for this section to take effect
         watch: {
+            options: {
+                livereload: true,
+            },
             scss: {
                 files: 'src/scss/**/*.scss',
-                tasks: 'default'
+                tasks: 'sass:dev'
             },
             scripts: {
                 files: 'src/js/**/*.js',
-                tasks: [ 'uglify'],
-                options: {
-                    spawn: false,
-                    livereload: true
-                },
-            },
-            livereload: {
-                options: {
-                  livereload: true
-                },
-                files: [
-                  'dist/css/styles.css'
-                ]
-              }
-        },
-
-        browserSync: {
-          dev: {
-              bsFiles: {
-                  src : [
-                      'src/scss/**/*.scss',
-                      'dist/css/*.css',
-                      'src/js/**/*.js',
-                      'dist/js/**/*.js'
-                  ]
-              },
-              options: {
-                  server: {
-                      baseDir: "./"
-                  }
-              }
-          }
-      }
+                tasks: ['concat', 'uglify']
+            }
+        }
     });
 
     grunt.loadNpmTasks('grunt-contrib-sass');
@@ -115,8 +113,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
 
     // Default Task
-    grunt.registerTask('default', ['sass:dev', 'concat', 'uglify']);
+    grunt.registerTask('default', ['sass:dev', 'browserSync', 'watch']);
 
     // Watch task
-    grunt.registerTask('watch', ["browserSync", "watch"]);
+    // grunt.registerTask('watch', ['concat', 'uglify', 'watch']);
 };

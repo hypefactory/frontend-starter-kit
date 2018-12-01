@@ -17,6 +17,8 @@ Options: `is--success`, `is--info`, `is--warning`, `is--error`.
   @include unitize(line-height, 24);
   position: relative;
   overflow: hidden;
+  padding: .75rem 1.25rem;
+  border-radius: 4px;
 
   &.is--success {
     color: darken($highlight-success, 15%);

@@ -1,0 +1,46 @@
+.image-zoom {
+  display: block;
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
+  position: relative;
+  -webkit-transition: opacity .4s;
+  transition: opacity .4s;
+  -webkit-backface-visibility: hidden;
+
+  &:hover {
+    &:not(.is--active) {
+      opacity: .8;
+    }
+  }
+
+  &.is--active {
+    cursor: -webkit-zoom-out;
+    cursor: zoom-out
+  }
+
+  &--caption {
+    position: fixed;
+    display: none;
+    line-height: 50px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    height: 50px;
+    z-index: 1000;
+    -webkit-font-smoothing: antialiased;
+    @include unitize(font-size, 12);
+    color: #888;
+  }
+}
+
+#image-zoom--overlay {
+  position:fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 1000;
+  will-change: opacity;
+}

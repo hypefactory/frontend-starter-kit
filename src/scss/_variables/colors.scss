@@ -1,13 +1,16 @@
-$brand-primary: #D9400B;
-$brand-secondary: #5F7285;
+$brand-primary: #0070c9;
+$brand-secondary: #333;
 $text-color: #111;
 $text-color-dark: #000;
+
 $body-bg: #fff;
 $border-color: #111;
 
 $success-color: #2ECC71;
 $error-color: #E74C3C;
 $link-color: #0070c9;
+
+$violator-color: #e85d00;
 
 $highlight-success: $success-color;
 $highlight-error: $error-color;
@@ -21,18 +24,29 @@ $btn-icon-size: 10;
 $btn-default-top-bg: #FFFFFF;
 $btn-default-bottom-bg: #F5F5F8;
 $btn-default-hover-bg: #FFFFFF;
-$btn-default-text-color: $text-color;
-$btn-default-hover-text-color: $brand-primary;
+$btn-default-text-color: #333;
+$btn-default-hover-text-color: lighten($text-color, 10%);
+
 $btn-primary-top-bg: $brand-primary;
 $btn-primary-bottom-bg: $brand-primary;
-$btn-primary-hover-bg: $brand-primary;
+$btn-primary-hover-bg: #147bcd;
 $btn-primary-text-color: #FFFFFF;
 $btn-primary-hover-text-color: $btn-primary-text-color;
+
 $btn-secondary-top-bg: $brand-primary;
 $btn-secondary-bottom-bg: $brand-secondary;
-$btn-secondary-hover-bg: $brand-secondary;
+$btn-secondary-hover-bg: lighten($brand-secondary, 5%);
 $btn-secondary-text-color: #FFFFFF;
 $btn-secondary-hover-text-color: $btn-secondary-text-color;
+
+$gray: #F5F5F8;
+$gray-light: lighten($gray, 1%);
+$gray-dark: darken($gray-light, 10%);
+$border-color: $gray-dark;
+$btn-default-border-color: $border-color;
+$btn-default-hover-border-color: $brand-primary;
+
+$btn-default-link-color: #0070c9;
 
 // 4. Cards
 // ==========================================================================
@@ -65,3 +79,11 @@ $table-row-color: $brand-secondary;
 $table-row-highlight-bg: darken($table-row-bg, 4%);
 $table-header-bg: $brand-secondary;
 $table-header-color: #FFFFFF;
+
+// 6. Tabs
+// ==========================================================================
+
+$tab-highlight-color: unquote("rgb(#{$brand-primary})") !default;
+$tab-text-color: unquote("rgba(#{$text-color}, 0.54)") !default;
+$tab-active-text-color: unquote("rgba(#{$text-color}, 0.87)") !default;
+$tab-border-color: unquote("rgb(#{$gray})") !default;

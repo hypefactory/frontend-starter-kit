@@ -305,16 +305,16 @@
             var me = this, attr;
             ignoreList = ignoreList || [];
 
+            // console.log(me.getName() + ': ', me.opts);
+
             $.each(me.opts, function (key) {
-                if (ignoreList.indexOf(key) !== -1) {
-                    return;
-                }
+                if (ignoreList.indexOf(key) !== -1) return;
 
                 attr = me.$el.attr('data-' + key);
 
-                if (typeof attr === 'undefined') {
-                    return true;
-                }
+                //console.log(key + ':', attr);
+
+                if (typeof attr === 'undefined') return true;
 
                 me.opts[key] = shouldDeserialize !== false ? deserializeValue(attr) : attr;
 

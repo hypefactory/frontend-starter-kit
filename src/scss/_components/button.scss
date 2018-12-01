@@ -15,21 +15,25 @@ Adding the class `is--disabled` changes the element to a disabled button.
 */
 
 .btn {
-  @include unitize-padding(2, 10);
+  @include unitize-padding(4, 20);
   @include unitize(line-height, 32);
-  @include border-radius(3px);
+  @include border-radius(4px);
   @include appearance();
-  @include unitize($font-size-base, 16, font-size);
-  @include linear-gradient($btn-default-top-bg, $btn-default-bottom-bg);
+  @include unitize(font-size, $font-size-base);
+  background: transparent;
+  box-sizing: border-box;
   -webkit-font-smoothing: inherit;
   display: inline-block;
   position: relative;
-  font-weight: $font-bold-weight;
+  font-weight: $font-base-weight;
   text-decoration: none;
   text-align: left;
   cursor: pointer;
-  border: none;
-  color: $btn-default-text-color;
+  border: 1px solid $btn-default-link-color;
+  color: $btn-default-link-color;
+  min-width: 30px;
+  white-space: nowrap;
+  z-index: $zindex-buttons;
 
   /** Button icon font size */
   [class^="icon--"] {
@@ -39,7 +43,7 @@ Adding the class `is--disabled` changes the element to a disabled button.
   /** Larger icon */
   .is--large {
     $largeFontSize: $font-size-base + 2;
-    @include unitize($largeFontSize, 16, font-size);
+    @include unitize(font-size, $largeFontSize);
   }
 
   /*
@@ -91,15 +95,16 @@ Adding the class `is--disabled` changes the element to a disabled button.
   &.is--disabled,
   &.is--disabled:hover {
     @include opacity(0.5);
-    @include linear-gradient($btn-default-top-bg, $btn-default-bottom-bg);
-    border: none;
-    color: $btn-default-text-color;
+    background: #f2f2f2;
+    border: 1px solid #555;
+    color: #555;
     cursor: not-allowed;
+    text-decoration: none;
   }
 
   &:hover {
-    background: $btn-default-hover-bg;
-    color: $btn-default-hover-text-color;
+    text-decoration: underline;
+    color: $btn-default-link-color;
   }
 
   &:focus {
@@ -128,13 +133,13 @@ Adding the class `is--disabled` changes the element to a disabled button.
   /** State: Medium button */
   &.is--medium {
     @include unitize(line-height, 32);
-    @include unitize(height, 38);
+    @include unitize(height, 42);
   }
 
   /** State: Large button */
   &.is--large {
     @include unitize(line-height, 36);
-    @include unitize(height, 42);
+    @include unitize(height, 46);
   }
 
   /** State: Button with 100% width */
@@ -145,6 +150,86 @@ Adding the class `is--disabled` changes the element to a disabled button.
   /** State: Button with text align center */
   &.is--center {
     text-align: center;
+  }
+
+  &.is--primary {
+    @include unitize-padding(2, 12);
+    @include unitize(line-height, 34);
+    @include linear-gradient($btn-primary-top-bg, $btn-primary-bottom-bg);
+    border: 0 none;
+    color: $btn-primary-text-color;
+    @include transition(box-shadow .25s);
+    @include shadow-8dp($brand-primary);
+
+    &:hover {
+      background: $btn-primary-hover-bg;
+      color: $btn-primary-hover-text-color;
+      text-decoration: none;
+      @include shadow-16dp($brand-primary);
+    }
+
+    /** State: Small button */
+    &.is--small {
+      @include unitize(line-height, 30);
+    }
+
+    /** State: Large button */
+    &.is--large {
+      @include unitize(line-height, 38);
+    }
+  }
+
+  &.is--secondary {
+    @include unitize-padding(2, 12);
+    @include unitize(line-height, 34);
+    background: $brand-secondary;
+    border: 0 none;
+    color: $btn-secondary-text-color;
+    @include transition(box-shadow .25s);
+    @include shadow-6dp($brand-secondary);
+
+    &:hover {
+      background: $btn-secondary-hover-bg;
+      color: $btn-secondary-hover-text-color;
+      text-decoration: none;
+      @include shadow-16dp($brand-secondary);
+    }
+
+    /** State: Small button */
+    &.is--small {
+      @include unitize(line-height, 30);
+    }
+
+    /** State: Large button */
+    &.is--large {
+      @include unitize(line-height, 38);
+    }
+  }
+
+  &.is--link {
+    @include unitize-padding(2, 12);
+    @include unitize(line-height, 34);
+
+    border: 0 none;
+    background: transparent;
+    color: $btn-default-link-color;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+      color: $btn-default-link-color;
+      background: transparent;
+    }
+
+    /** State: Small button */
+    &.is--small {
+      @include unitize(line-height, 30);
+    }
+
+    /** State: Large button */
+    &.is--large {
+      @include unitize(line-height, 38);
+    }
   }
 }
 
@@ -160,71 +245,3 @@ Options: `is--primary`, `is--secondary`
 </button>
 ```
 */
-.is--primary {
-  @include unitize-padding(2, 12);
-  @include unitize(line-height, 34);
-  @include linear-gradient($btn-primary-top-bg, $btn-primary-bottom-bg);
-  border: 0 none;
-  color: $btn-primary-text-color;
-
-  &:hover {
-    background: $btn-primary-hover-bg;
-    color: $btn-primary-hover-text-color;
-  }
-
-  /** State: Small button */
-  &.is--small {
-    @include unitize(line-height, 30);
-  }
-
-  /** State: Large button */
-  &.is--large {
-    @include unitize(line-height, 38);
-  }
-}
-
-.is--secondary {
-  @include unitize-padding(2, 12);
-  @include unitize(line-height, 34);
-  @include linear-gradient($btn-secondary-top-bg, $btn-secondary-bottom-bg);
-  border: 0 none;
-  color: $btn-secondary-text-color;
-
-  &:hover {
-    background: $btn-secondary-hover-bg;
-    color: $btn-secondary-hover-text-color;
-  }
-
-  /** State: Small button */
-  &.is--small {
-    @include unitize(line-height, 30);
-  }
-
-  /** State: Large button */
-  &.is--large {
-    @include unitize(line-height, 38);
-  }
-}
-
-.is--link {
-  @include unitize-padding(2, 12);
-  @include unitize(line-height, 34);
-
-  border: 0 none;
-  background: transparent;
-  color: $brand-secondary;
-
-  &:hover {
-    color: $brand-primary;
-  }
-
-  /** State: Small button */
-  &.is--small {
-    @include unitize(line-height, 30);
-  }
-
-  /** State: Large button */
-  &.is--large {
-    @include unitize(line-height, 38);
-  }
-}

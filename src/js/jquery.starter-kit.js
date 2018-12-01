@@ -37,6 +37,17 @@
 
         // Initialize the registration plugin
         .addPlugin('*[data-cookie-permission="true"]', 'hfCookiePermission')
+
+        .addPlugin('*[data-tabs="true"]', 'hfTabs')
+
+        // Collapse Plugin
+        .addPlugin('*[data-accordion="true"]', 'hfAccordion')
+
+        .addPlugin('*[data-image-zoom="true"]', 'hfImageZoom')
+
+        .addPlugin('*[data-tooltip="true"]', 'hfTooltip')
+
+        .addPlugin('*[data-toggle="true"]', 'hfToggle')
     ;
 
     /*$(function($) {

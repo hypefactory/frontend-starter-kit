@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Frontend Starter Kit - UI Components</title>
+
+    <link rel="stylesheet" href="dist/css/styles.css">
+
+    <script type="text/javascript" src="dist/js/app.js"></script>
+
+    <!--[if lt IE 8]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+        your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- TODO: Add Code under Components-->
+
+    <style>
+        header.hero {
+            box-sizing: border-box;
+            padding: 2rem;
+            background: #FFF;
+            border: 1px solid #FFF;
+            border-radius: 2px;
+        }
+
+        header.hero h1 {
+            font-size: 44px;
+            line-height: 1.09091;
+            font-weight: 600;
+            letter-spacing: -.002em;
+            white-space: nowrap;
+        }
+
+        header.hero h2 {
+            font-size: 24px;
+            line-height: 1.16667;
+            font-weight: 400;
+            letter-spacing: .009em;
+            white-space: nowrap;
+        }
+
+        header.hero p {
+            font-size: 1.25rem;
+            margin-bottom: 0;
+            padding: 0 2rem;
+            text-align: center;
+        }
+
+        header.hero a {
+            color: #0070c9;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        header.hero a:hover {
+            text-decoration: underline;
+        }
+
+        header.hero a.button {
+            position: relative;
+            display: inline-block;
+            box-sizing: border-box;
+            min-width: 11rem;
+            padding: 0 4rem;
+            margin: 1rem;
+            height: 3rem;
+            line-height: 2.5rem;
+            border: 2px solid #0070c9;
+            border-radius: 2px;
+            color: #0070c9;
+            font-size: 1.25rem;
+        }
+
+        .page-section {
+            padding-top: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .box-row {
+            position: relative;
+            box-sizing: border-box;
+            min-height: 1rem;
+            background: #111;
+            border: 1px solid #FFF;
+            border-radius: 2px;
+            overflow: hidden;
+            text-align: center;
+            color: #fff;
+            margin-bottom: 1rem;
+            padding: 1rem;
+        }
+
+        .page-footer {
+            font-size: 11px;
+            line-height: 1.36364;
+            font-weight: 400;
+            letter-spacing: -.008em;
+            background-color: #f2f2f2;
+            color: #888;
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+            padding: 3rem;
+        }
+
+        .page-footer a {
+            color: #0070c9;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .page-footer a:hover {
+            text-decoration: underline;
+        }
+
+        .page-footer p {
+            margin-bottom: 0;
+            font-size: 11px;
+        }
+
+        .footer-links {
+            padding-left: 0;
+            margin-bottom: 1rem;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #d6d6d6;
+        }
+
+        .footer-links li {
+            border-right: 1px solid #d6d6d6;
+            margin-right: 7px;
+            padding-right: 10px;
+            display: inline-block;
+            margin-top: 5px;
+            white-space: nowrap;
+        }
+
+        .footer-links li:last-child {
+            border: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .footer-links li a {
+            color: #555;
+            text-decoration: none;
+        }
+
+        .footer-links li a:hover {
+            color: #333;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<header class="hero">
+    <div class="row center-xs">
+        <h1>Starter Kit</h1>
+        <h2>Frontend</h2>
+    </div>
+    <div class="row center-xs">
+        <p>This is a ui framework for building frontend user interfaces with vanillaJS and jQuery Plugins.</p>
+    </div>
+    <div class="row center-xs">
+        <a class="button" href="https://github.com/hypefactory/frontend-starter-kit/archive/master.zip">Download</a>
+    </div>
+</header>
+
+<main class="wrap">
+    <section id="grid" class="container-fluid page-section">
+        <div class="row">
+            <div class="col-sx-12">
+                <h2>Flexbox Grid</h2>
+                <p>Responsive modifiers enable specifying different column sizes, offsets, alignment and breakpoints at
+                    xs, sm, md &amp; lg viewport widths.</p>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="row">
+                <div class="col-xs-12 col-sm-3 col-md-2 col-lg-1">
+                    <div class="box-row"></div>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-8 col-lg-10">
+                    <div class="box-row"></div>
+                </div>
+                <div class="col-xs-6 col-sm-3 col-md-2 col-lg-1">
+                    <div class="box-row"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-3 col-md-2 col-lg-1">
+                    <div class="box-row"></div>
+                </div>
+                <div class="col-xs-12 col-sm-9 col-md-10 col-lg-11">
+                    <div class="box-row"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-10 col-sm-6 col-md-8 col-lg-10">
+                    <div class="box-row"></div>
+                </div>
+                <div class="col-xs-2 col-sm-6 col-md-4 col-lg-2">
+                    <div class="box-row"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="typography" class="container-fluid page-section">
+        <div class="row">
+            <div class="col-sx-12">
+                <h2>Typography</h2>
+                <p>Examples for Starter Kit - Frontend typography, including headings, body text, lists.</p>
+            </div>
+        </div>
+
+        <div class="typography">
+            <h1>Headline 1</h1>
+            <h2>Headline 2</h2>
+            <h3>Headline 3</h3>
+            <h4>Headline 4</h4>
+            <h5>Headline 5</h5>
+            <h6>Headline 6</h6>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa dolorem ex excepturi, maxime mollitia
+                necessitatibus neque nesciunt perferendis possimus, praesentium quaerat repellendus totam, voluptatum?
+                Assumenda delectus deserunt dolorum quos veniam.</p>
+        </div>
+
+        <div class="row">
+            <div class="col-sx-12">
+                <h3>Inline Elements</h3>
+                <p>
+                    Styling for common inline HTML5 elements.
+                </p>
+            </div>
+        </div>
+
+        <div class="typography-inline-elements">
+            <p>You can use the mark tag to
+                <mark>highlight</mark>
+                text.
+            </p>
+            <p>
+                <del>This line of text is meant to be treated as deleted text.</del>
+            </p>
+            <p><s>This line of text is meant to be treated as no longer accurate.</s></p>
+            <p>
+                <ins>This line of text is meant to be treated as an addition to the document.</ins>
+            </p>
+            <p><u>This line of text will render as underlined</u></p>
+            <p>
+                <small>This line of text is meant to be treated as fine print.</small>
+            </p>
+            <p><strong>This line rendered as bold text.</strong></p>
+            <p><em>This line rendered as italicized text.</em></p>
+        </div>
+
+
+        <div class="row">
+            <div class="col-sx-12">
+                <h2>Buttons</h2>
+                <p>
+                    Use Starter Kit's button styles for actions in forms, modals, and more with support for multiple
+                    sizes, states, and more.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-sx-12" style="margin-bottom:1rem;">
+            <a class="btn">Basic</a>
+            <a class="btn is--link">Link</a>
+            <a class="btn is--primary">Primary</a>
+            <a class="btn is--secondary">Secondary</a>
+        </div>
+
+        <div class="col-sx-12" style="margin-bottom:1rem;">
+            <a class="btn is--large">Large button</a>
+            <a class="btn is--medium">Medium button</a>
+            <a class="btn is--small">Small button</a>
+        </div>
+
+        <div class="col-sx-12" style="margin-bottom:1rem;">
+            <a class="btn is--full">Full button</a>
+            <a class="btn is--full is--center" style="margin-top: 10px;">Centered button</a>
+        </div>
+
+        <div class="col-sx-12" style="margin-bottom:1rem;">
+            <button class="btn">Basic button</button>
+            <button class="btn is--disabled">Disabled button</button>
+        </div>
+
+        <div class="row">
+            <div class="col-sx-12">
+                <h2>Alerts</h2>
+                <p>
+                    Provide contextual feedback messages for typical user actions with the handful of available and
+                    flexible alert messages.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-sx-12">
+            <p class="alert is--success alert--content">Success Message</p>
+            <p class="alert is--info">Info Message</p>
+            <p class="alert is--warning">Warning Message</p>
+            <p class="alert is--error">Error Message</p>
+        </div>
+
+        <div class="row">
+            <div class="col-sx-12">
+                <h2>Labels</h2>
+                <p>
+                    Examples for badges, our small count and labeling component.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-sx-12" style="margin-bottom:1rem;">
+            <span class="label success">Success!</span>
+            <span class="label info">Info!</span>
+            <span class="label warning">Warning!</span>
+            <span class="label error">Error!</span>
+        </div>
+
+        <div class="row">
+            <div class="col-sx-12">
+                <h2>Labels Outlined</h2>
+                <p>
+                    Outlined examples for labels, our small count and labeling component.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-sx-12" style="margin-bottom:1rem;">
+            <span class="label is--outlined success">Success!</span>
+            <span class="label is--outlined info">Info!</span>
+            <span class="label is--outlined warning">Warning!</span>
+            <span class="label is--outlined error">Error!</span>
+        </div>
+
+        <div class="row">
+            <div class="col-sx-12">
+                <h2>Dot Labels</h2>
+                <p>
+                    Examples for badges, our small count and labeling component.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-sx-12" style="margin-bottom:1rem;">
+            <div class="dot-label" style="margin-bottom: 1rem">
+                <span class="text success-text">
+                    <i class="icon success-status"></i>
+                    Success Dot Label
+                </span>
+            </div>
+
+            <div class="dot-label" style="margin-bottom: 1rem">
+                <span class="text notice-text">
+                    <i class="icon notice-status"></i>
+                    Notice Dot Label
+                </span>
+            </div>
+
+            <div class="dot-label" style="margin-bottom: 1rem">
+                 <span class="text info-text">
+                    <i class="icon info-status"></i>
+                    Info Dot Label
+                </span>
+            </div>
+
+            <div class="dot-label" style="margin-bottom: 1rem">
+                <span class="text error-text">
+                    <i class="icon error-status"></i>
+                    Error Dot Label
+                </span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sx-12">
+                <h2>Badges</h2>
+                <p>
+                    Using the contextual classes on an a-tag element quickly provide actionable badges with hover and
+                    focus states.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-xs-12">
+            <p><span class="badge is--primary">1</span> Primary Badge</p>
+            <p><span class="badge is--secondary">2</span> Secondary Badge</p>
+            <p><span class="badge is--minimal">3</span> Minimal Badge</p>
+        </div>
+
+
+        <div class="row">
+            <div class="col-sx-12">
+                <h2>Violator</h2>
+                <p>
+                    Using the contextual classes on an a-tag element quickly provide actionable badges with hover and
+                    focus states.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-xs-12">
+            <p><span class="violator">New</span></p>
+            <p><span class="violator-frameless">New</span></p>
+        </div>
+
+        <div class="row">
+            <div class="col-sx-12">
+                <h2>Lists</h2>
+                <p>
+                    Using the contextual classes on an a-tag element quickly provide actionable badges with hover and
+                    focus states.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-xs-12">
+            <ul class="list--unordered">
+                <li>Default list</li>
+            </ul>
+
+            <ul class="list--unordered is--checked">
+                <li>is--checked</li>
+            </ul>
+
+            <ul class="list--unordered is--disc">
+                <li>is--disc</li>
+            </ul>
+
+            <ul class="list--unordered is--arrow-right">
+                <li>is--arrow-right</li>
+            </ul>
+
+            <ul class="list--unordered is--star">
+                <li>is--star</li>
+            </ul>
+
+            <ul class="list--unordered is--cross">
+                <li>is--cross</li>
+            </ul>
+
+            <ul class="list--unordered is--tag">
+                <li>is--tag</li>
+            </ul>
+
+            <ul class="list--unordered is--plus">
+                <li>is--plus</li>
+            </ul>
+        </div>
+
+        <div class="row">
+            <div class="col-sx-12">
+                <h2>Form</h2>
+                <p>
+                    Using the contextual classes on an a-tag element quickly provide actionable badges with hover and
+                    focus states.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-xs-12">
+            <form id="signin-form-fields" autocomplete="off" action="#" method="post">
+                <fieldset>
+                    <legend class="as-signin-subheader">Form</legend>
+                    <div class="as-signin-input">
+                        <div class="form-element is-error">
+                            <input type="email" id="loginHome.customerLogin.appleId" name="appleId"
+                                   class="form-textbox form-textbox-text" required="" maxlength="120">
+                            <span aria-hidden="true" class="form-label" id="loginHome.customerLogin.appleId-label">Input Field</span>
+                            <div aria-hidden="true">
+                                <div id="loginHome.customerLogin.appleId-error" class="form-message-wrapper">Input is missing.
+                                </div>
+                                <div id="loginHome.customerLogin.appleId-warn" class="form-message-warning"></div>
+                            </div>
+                        </div>
+
+                        <div class="form-element">
+                            <input type="number" id="inputNumber" name="inputNumber" class="form-textbox">
+                            <span aria-hidden="true" class="form-label" id="inputNumber-label">Number</span>
+                            <div aria-hidden="false">
+                                <div id="inputNumber-error" class="form-message-wrapper"></div>
+                                <div id="inputNumber-warn" class="form-message-warning"></div>
+                            </div>
+                        </div>
+
+                        <div class="form-element">
+                            <input type="password" id="loginHome.customerLogin.password" name="password"
+                                   class="form-textbox form-textbox-text" required="" maxlength="32">
+                            <span aria-hidden="true" class="form-label" id="password-label">Password</span>
+                            <div aria-hidden="true">
+                                <div id="loginHome.customerLogin.password-error" class="form-message-wrapper"></div>
+                                <div id="loginHome.customerLogin.password-warn" class="form-message-warning"></div>
+                            </div>
+                        </div>
+
+                        <div class="form-element">
+                            <select id="checkout.shipping.addressSelector.newAddress.address.zipLookup-zipLookupCityState" class="form-dropdown">
+                                <option value="Schenectady , NY" selected>Schenectady , NY</option>
+                                <option value="Other">Other</option>
+                            </select>
+                            <span aria-hidden="true" class="form-icon icon icon-chevrondown"></span>
+                            <label for="checkout.shipping.addressSelector.newAddress.address.zipLookup-zipLookupCityState"
+                                   class="form-label">City, State</label>
+                            <div aria-live="polite"
+                                 id="checkout.shipping.addressSelector.newAddress.address.zipLookup-zipLookupCityState-error"
+                                 class="form-message-wrapper"></div>
+                        </div>
+
+                        <div class="form-element">
+                            <input value="United States" type="text"
+                                   id="checkout.shipping.addressSelector.newAddress.address.countryCode"
+                                   name="countryCode" class="form-textbox form-textbox-text form-textbox-entered"
+                                   required="" disabled="">
+                            <span aria-hidden="true" class="form-label"
+                                  id="checkout.shipping.addressSelector.newAddress.address.countryCode-label">
+                                Country
+                            </span>
+                            <div aria-hidden="true">
+                                <div id="checkout.shipping.addressSelector.newAddress.address.countryCode-error"
+                                     class="form-message-wrapper"></div>
+                                <div id="checkout.shipping.addressSelector.newAddress.address.countryCode-warn"
+                                     class="form-message-warning"></div>
+                            </div>
+                        </div>
+
+                        <div class="form-element">
+                            <input value="" type="tel"
+                                   id="checkout.fulfillment.deliveryTab.delivery.deliveryLocation.address.postalCode"
+                                   name="postalCode" class="form-textbox form-textbox-text undefined" maxlength="10">
+                            <span aria-hidden="true" class="form-label"
+                                  id="checkout.fulfillment.deliveryTab.delivery.deliveryLocation.address.postalCode-label">Zip Code</span>
+                            <div aria-hidden="true">
+                                <div id="checkout.fulfillment.deliveryTab.delivery.deliveryLocation.address.postalCode-error"
+                                     class="form-message-wrapper"></div>
+                                <div id="checkout.fulfillment.deliveryTab.delivery.deliveryLocation.address.postalCode-warn"
+                                     class="form-message-warning"></div>
+                            </div>
+                            <button value="" class="form-textbox-button apply-button" disabled="">
+                                <span aria-hidden="true">Apply</span>
+                                <span class="visuallyhidden">Apply Zip Code</span>
+                            </button>
+                        </div>
+
+                        <div class="form-element">
+                            <textarea id="textAreaExample" name="textAreaExample" class="form-textbox form-textbox-textarea" cols="30" rows="10"></textarea>
+                            <span aria-hidden="true" class="form-label" id="textAreaExample-label">
+                                Textarea
+                            </span>
+                            <div aria-hidden="true">
+                                <div id="textAreaExample-error" class="form-message-wrapper"></div>
+                                <div id="textAreaExample-warn" class="form-message-warning"></div>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="as-signin-button">
+                    <button id="signin-button-submit" type="button"
+                            class="btn is--center is--primary button-block form-button">
+                        <span aria-hidden="true">Submit Button</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <div class="col-sx-12">
+            <fieldset class="rs-fulfillment-deliveryoptions" style="width: 50%;">
+                <legend>Selectboxes</legend>
+                <div class="column large-12 small-12 form-selector-twocolumns">
+                    <div class="form-element rs-fulfillment-deliveryoption">
+                        <input value="UG"
+                               name="deliveryOptions-checkout.fulfillment.deliveryTab.delivery.shipmentGroups.shipmentGroup-1.shipmentOptionsGroups.shipmentOptionsGroup-1"
+                               type="radio"
+                               id="checkout.fulfillment.deliveryTab.delivery.shipmentGroups.shipmentGroup-1.shipmentOptionsGroups.shipmentOptionsGroup-1-UG"
+                               class="form-choice form-choice-selector rounded" checked="checked">
+                        <div class="form-choice-selector-label">
+                            <label for="checkout.fulfillment.deliveryTab.delivery.shipmentGroups.shipmentGroup-1.shipmentOptionsGroups.shipmentOptionsGroup-1-UG"
+                                   class="form-label">
+                                <span class="form-choiceselectorlabel-twocol">
+                                    <span class="form-choiceselectorlabel-twocolleft">
+                                        <span class="row form-selector-title">Delivery: 1 business day</span>
+                                        <span class="row form-label-small">Standard Delivery</span>
+                                    </span>
+                                    <span class="form-choiceselectorlabel-twocolright">
+                                        <span>FREE</span>
+                                    </span>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="column large-12 small-12 form-selector-twocolumns">
+                    <div class="form-element rs-fulfillment-deliveryoption">
+                        <input value="E2"
+                               name="deliveryOptions-checkout.fulfillment.deliveryTab.delivery.shipmentGroups.shipmentGroup-1.shipmentOptionsGroups.shipmentOptionsGroup-1"
+                               type="radio"
+                               id="checkout.fulfillment.deliveryTab.delivery.shipmentGroups.shipmentGroup-1.shipmentOptionsGroups.shipmentOptionsGroup-1-E2"
+                               class="form-choice form-choice-selector rounded">
+                        <div class="form-choice-selector-label">
+                            <label for="checkout.fulfillment.deliveryTab.delivery.shipmentGroups.shipmentGroup-1.shipmentOptionsGroups.shipmentOptionsGroup-1-E2"
+                                   class="form-label">
+                                <span class="form-choiceselectorlabel-twocol">
+                                    <span class="form-choiceselectorlabel-twocolleft">
+                                        <span class="row form-selector-title">Delivery: 1 business day</span>
+                                        <span class="row form-label-small">Standard Delivery</span>
+                                    </span>
+                                    <span class="form-choiceselectorlabel-twocolright">
+                                        <span>FREE</span>
+                                    </span>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="column large-12 small-12 form-selector-twocolumns">
+                    <div class="form-element rs-fulfillment-deliveryoption">
+                        <input value="SO"
+                               name="deliveryOptions-checkout.fulfillment.deliveryTab.delivery.shipmentGroups.shipmentGroup-1.shipmentOptionsGroups.shipmentOptionsGroup-1"
+                               type="radio"
+                               id="checkout.fulfillment.deliveryTab.delivery.shipmentGroups.shipmentGroup-1.shipmentOptionsGroups.shipmentOptionsGroup-1-SO"
+                               class="form-choice form-choice-selector rounded">
+                        <div class="form-choice-selector-label">
+                            <label for="checkout.fulfillment.deliveryTab.delivery.shipmentGroups.shipmentGroup-1.shipmentOptionsGroups.shipmentOptionsGroup-1-SO"
+                                   class="form-label">
+                                <span class="form-choiceselectorlabel-twocol">
+                                    <span class="form-choiceselectorlabel-twocolleft">
+                                        <span class="row form-selector-title">Delivery: 1 business day</span>
+                                        <span class="row form-label-small">Express Delivery</span>
+                                    </span>
+                                    <span class="form-choiceselectorlabel-twocolright">
+                                        <span>FREE</span>
+                                    </span>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+
+        <div class="col-xs-12">
+            <fieldset>
+                <div class="as-buttongroup as-buttongroup-hoverborder">
+                    <div class="as-buttongroup-item" style="width: 50%;">
+                        <input value="HOME" checked="checked" type="radio" name="fulfillmentOptionButtonGroup" id="fulfillmentOptionButtonGroup0" class="as-buttongroup-radio">
+                        <label for="fulfillmentOptionButtonGroup0" class="as-buttongroup-button rs-fulfillment-selector" style="width: 100%;">
+                            <span class="as-icondetails rs-fulfillment-optionstitle">
+                                <span class="rs-fulfillment-icondetails-container">
+                                    <span class="as-icondetails-icon rs-fulfillment-icondetails as-svgicon-container">
+                                        <svg width="36" height="36" class="as-svgicon as-svgicon-shipping as-svgicon-24 as-svgicon-shipping24" role="img" aria-hidden="true">
+                                            <path d="M18 4.98L6 11.07V24.4l12 6.64 12-6.64V11.07L18 4.98zm0 12.18l-4.56-2.52 10.12-5.72 4.87 2.47L18 17.16zm4.49-8.78l-10.07 5.7-4.85-2.68L18 6.1l4.49 2.28zM7 12.22l10.5 5.81v11.58L7 23.8V12.22zm11.5 17.39V18.03L29 12.22V23.8l-10.5 5.81z" fill="currentColor"></path>
+                                            <path fill="none" d="M0 0h36v36H0z"></path>
+                                        </svg>
+                                    </span>
+                                    <span class="as-icondetails-detail">
+                                        <span class="form-icon-label">I’d like it delivered</span>
+                                    </span>
+                                </span>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="as-buttongroup-item" style="width: 50%;">
+                        <input value="RETAIL" type="radio" name="fulfillmentOptionButtonGroup" id="fulfillmentOptionButtonGroup1" class="as-buttongroup-radio">
+                        <label for="fulfillmentOptionButtonGroup1" class="as-buttongroup-button rs-fulfillment-selector" style="width: 100%;">
+                            <span class="as-icondetails rs-fulfillment-optionstitle">
+                                <span class="rs-fulfillment-icondetails-container">
+                                    <span class="as-icondetails-icon rs-fulfillment-icondetails as-svgicon-container">
+                                        <svg width="36" height="36" class="as-svgicon as-svgicon-applestore as-svgicon-24 as-svgicon-applestore24" role="img" aria-hidden="true">
+                                            <path d="M18 33.49L14.78 30H10c-2.02 0-4-1.99-4-4.01V10.14c-.02-1.97 1.92-3.76 3.67-4.13L9.78 6l16.08.01c2 .32 4.14 1.63 4.14 4.33v15.65c0 2.03-1.98 4.01-4 4.01h-4.78L18 33.49zM9.83 7C8.5 7.31 6.98 8.73 7 10.13v15.85C7 27.45 8.54 29 10 29h5.22L18 32.01 20.78 29H26c1.46 0 3-1.55 3-3.01V10.33c0-2.56-2.45-3.19-3.26-3.33H9.83zm10.18 15.9c.33-.01.65-.15.94-.42.19-.17.43-.47.73-.9a6.13 6.13 0 0 0 .76-1.54c-.27-.11-.51-.28-.73-.49-.48-.46-.72-1.03-.73-1.72-.01-.89.39-1.57 1.17-2.07-.44-.64-1.11-1-1.99-1.08-.33-.03-.73.04-1.2.22-.5.19-.79.28-.88.28-.12 0-.38-.08-.79-.24-.41-.16-.75-.24-1-.24-.47.01-.9.13-1.3.37s-.72.57-.96 1c-.3.52-.46 1.15-.46 1.87 0 .63.11 1.28.34 1.96.21.62.48 1.17.81 1.64.3.44.56.75.76.94.32.3.64.45.96.44.21-.01.48-.08.82-.22.34-.14.66-.21.96-.21.28 0 .59.07.93.21.33.13.62.2.86.2zm-2.02-8.35c.61.05 1.15-.2 1.61-.76.38-.47.57-.98.57-1.52 0-.07 0-.14-.01-.22-.27.02-.56.1-.86.25-.3.15-.55.34-.74.57-.39.46-.59.95-.59 1.47.01.08.01.15.02.21z" fill="currentColor"></path>
+                                            <path fill="none" d="M0 0h36v36H0z"></path>
+                                        </svg>
+                                    </span>
+                                    <span class="as-icondetails-detail">
+                                        <span class="form-icon-label">I'll pick it up</span>
+                                    </span>
+                                </span>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+
+        <div class="row">
+            <div class="col-sx-12">
+                <h3>Checboxes</h3>
+                <p>
+                    Using the contextual classes on an a-tag element quickly provide actionable badges with hover and
+                    focus states.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-sx-12">
+            <div class="form-element">
+                <input id="checbox.unchecked" type="checkbox" name="checkboxInput1" class="form-choice form-choice-checkbox">
+                <label for="checbox.unchecked" class="form-label">
+                    <span class="form-choice-indicator"></span>
+                    <span>Checkbox</span>
+                </label>
+            </div>
+
+            <div class="form-element">
+                <input id="checkbox.checked" type="checkbox" name="checkboxInput2" class="form-choice form-choice-checkbox" checked>
+                <label for="checkbox.checked" class="form-label">
+                    <span class="form-choice-indicator"></span>
+                    <span>Checkbox (checked)</span>
+                </label>
+            </div>
+
+            <div class="form-element">
+                <input type="checkbox" class="form-choice form-toggle" name="toggleInput1" id="toggleInput">
+                <span class="form-toggle-indicator"></span>
+                <label for="toggleInput" class="form-label">
+                    <span>Checkbox (checked)</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sx-12">
+                <h3>Radios</h3>
+                <p>
+                    Using the contextual classes on an a-tag element quickly provide actionable badges with hover and
+                    focus states.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-sx-12">
+            <fieldset>
+                <div class="form-element">
+                    <input id="radioButtonChecked" name="groupRadioButtons1" type="radio" class="form-choice form-choice-radio" value="0" checked>
+                    <label for="radioButtonChecked" class="form-label">
+                        <span class="form-choice-indicator"></span>
+                        <span>Radio Button (checked)</span>
+                    </label>
+                </div>
+
+                <div class="form-element">
+                    <input id="radioButtonUnchecked" name="groupRadioButtons1" type="radio" class="form-choice form-choice-radio" value="1">
+                    <label for="radioButtonUnchecked" class="form-label">
+                        <span class="form-choice-indicator"></span>
+                        <span>Radio Button</span>
+                    </label>
+                </div>
+            </fieldset>
+        </div>
+
+        <div class="row">
+            <div class="col-sx-12">
+                <h3>Accordion Menu</h3>
+                <p>
+                    Using the contextual classes on an a-tag element quickly provide actionable badges with hover and
+                    focus states.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-sx-12">
+            <div class="accordions" data-accordion="true" data-open-single="true">
+                <ul class="accordions--list">
+                    <li class="accordion--item">
+                        <div class="accordion--heading">
+                            <h2 class="accordion--header">
+                                <button class="accordion--button" data-target="#productInformations" data-self-close="true">
+                                    <span class="accordion--title">Product Informations</span>
+                                    <span class="accordion--icon"></span>
+                                </button>
+                            </h2>
+                        </div>
+                        <div class="accordion--content" id="productInformations">
+                            <div class="accordion--content-inner">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci atque explicabo facere illum impedit incidunt iusto modi, molestiae nam necessitatibus nulla numquam porro quia reprehenderit repudiandae, rerum, sapiente sequi vel!
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="accordion--item">
+                        <div class="accordion--heading">
+                            <h2 class="accordion--header">
+                                <button class="accordion--button" data-target="#compatibility">
+                                    <span class="accordion--title">Compatibility</span>
+                                    <span class="accordion--icon"></span>
+                                </button>
+                            </h2>
+                        </div>
+                        <div class="accordion--content" id="compatibility">
+                            <div class="accordion--content-inner">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus architecto at consequatur distinctio, ducimus fuga ipsum minus modi nobis quibusdam quisquam, repellendus repudiandae sunt, tempora voluptatibus. Alias delectus ducimus veniam.
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="accordion--item">
+                        <div class="accordion--heading">
+                            <h2 class="accordion--header">
+                                <button class="accordion--button" data-target="#ratings" data-stay-open="true">
+                                    <span class="accordion--title">Ratings</span>
+                                    <span class="accordion--icon"></span>
+                                </button>
+                            </h2>
+                        </div>
+                        <div class="accordion--content" id="ratings">
+                            <div class="accordion--content-inner">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam cupiditate expedita ipsam ipsum nemo perferendis ut veniam veritatis voluptate! At consequatur dolores, eligendi eveniet excepturi magnam nostrum odit quae unde.
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sx-12">
+                <h3>Tabs</h3>
+                <p>
+                    Using the contextual classes on an a-tag element quickly provide actionable badges with hover and
+                    focus states.
+                </p>
+            </div>
+        </div>
+        <div class="col-sx-12">
+            <!-- Tabs-->
+            <div class="tabs" data-tabs="true">
+                <!-- Tabs Header-->
+                <div class="tabs-header">
+                    <!-- Tabs-->
+                    <ul>
+                        <li class="is--active"><a href="#tab-1" tab-id="1">Tab 1</a></li>
+                        <li><a href="#tab-2" tab-id="2">Tab 2</a></li>
+                        <li><a href="#tab-3" tab-id="3">Tab 3</a></li>
+                        <li><a href="#tab-4" tab-id="4">Tab 4</a></li>
+                        <li><a href="#tab-5" tab-id="5">Tab 5</a></li>
+                    </ul>
+                </div>
+                <!-- Border-->
+                <div class="border"></div>
+                <!-- Tabs Content-->
+                <div class="tabs-content">
+                    <!-- Tab - Active-->
+                    <div class="tab is--active" tab-id="1">1. Donec ullamcorper nulla non metus auctor fringilla. Aenean
+                        eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Curabitur blandit tempus
+                        porttitor. Ellentesque ornare sem lacinia quam venenatis vestibulum. Curabitur blandit tempus
+                        porttitor.
+                    </div>
+                    <!-- Tab-->
+                    <div class="tab" tab-id="2">2. Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo
+                        quam.
+                    </div>
+                    <!-- Tab-->
+                    <div class="tab" tab-id="3">3. Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo
+                        quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Curabitur blandit tempus
+                        porttitor.
+                    </div>
+                    <!-- Tab-->
+                    <div class="tab" tab-id="4">4. Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo
+                        quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Curabitur blandit tempus
+                        porttitor. Maecenas faucibus mollis interdum. Donec ullamcorper nulla non metus auctor
+                        fringilla. Aenean lacinia bibendum nulla sed consectetur. Aenean lacinia bibendum nulla sed
+                        consectetur.
+                    </div>
+                    <!-- Tab-->
+                    <div class="tab" tab-id="5">5. Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo
+                        quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Curabitur blandit tempus
+                        porttitor.Cras mattis consectetur purus sit amet fermentum. Maecenas sed diam eget risus varius
+                        blandit sit amet non magna. Nullam quis risus eget urna mollis ornare vel eu leo. Morbi leo
+                        risus, porta ac consectetur ac, vestibulum at eros. Vivamus sagittis lacus vel augue laoreet
+                        rutrum faucibus dolor auctor. Maecenas sed diam eget risus varius blandit sit amet non magna.
+                        Maecenas sed diam eget risus varius blandit sit amet non magna. Duis mollis, est non commodo
+                        luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Integer posuere erat a ante
+                        venenatis dapibus posuere velit aliquet. Vestibulum id ligula porta felis euismod semper. Aenean
+                        lacinia bibendum nulla sed consectetur. Donec id elit non mi porta gravida at eget metus. Donec
+                        id elit non mi porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis
+                        parturient montes, nascetur ridiculus mus. Maecenas faucibus mollis interdum. Praesent commodo
+                        cursus magna, vel scelerisque nisl consectetur et. Aenean lacinia bibendum nulla sed
+                        consectetur. Maecenas faucibus mollis interdum. Donec ullamcorper nulla non metus auctor
+                        fringilla. Aenean lacinia bibendum nulla sed consectetur. Aenean lacinia bibendum nulla sed
+                        consectetur.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sx-12">
+                <h3>Image Zoom</h3>
+                <p>
+                    Using the contextual classes on an a-tag element quickly provide actionable badges with hover and
+                    focus states.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-sx-12">
+            <!-- TODO: Make on Magical Image if it is zoomed load 2x image - https://www.html5rocks.com/en/tutorials/responsive/picture-element/-->
+            <picture class="responsive-img">
+                <img class="image-zoom"
+                     data-image-zoom="true"
+                     data-caption="Picture by eberhard grossgasteiger unsplash.com/@eberhardgross"
+                     width="900" src="dist/images/image-1x.jpg"
+                     srcset="dist/images/image-1x.jpg 1x,dist/images/image-2x.jpg 2x">
+            </picture>
+        </div>
+
+        <div class="row">
+            <div class="col-sx-12">
+                <h3>Tooltips</h3>
+                <p>
+                    Using the contextual classes on an a-tag element quickly provide actionable badges with hover and
+                    focus states.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-sx-12">
+            <a href="#" class="btn is--primary" data-tooltip="true" data-html="true" data-position="bottom" data-content="I am a tooltip">Bottom</a>
+            <a href="#" class="btn is--primary" style="margin-left: 2rem" data-tooltip="true" data-position="top" data-content="I am a tooltip"> Top</a>
+            <a href="#" class="btn is--primary" style="margin-left: 2rem" data-tooltip="true" data-position="left" data-content="I am a tooltip"> Left</a>
+            <a href="#" class="btn is--primary" style="margin-left: 2rem" data-tooltip="true" data-position="right" data-content="I am a tooltip"> Right</a>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12">
+                <h3>Toggle</h3>
+                <p>
+                    Using the contextual classes on an a-tag element quickly provide actionable badges with hover and
+                    focus states.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-6">
+                <h4>Checkboxes</h4>
+
+                <p>
+                    <input type="checkbox" data-toggle="true" name="check-1" value="4" class="lcs_check"/>
+                </p>
+
+                <p>
+                    <input type="checkbox" data-toggle="true" name="check-2" value="5" class="lcs_check" disabled/>
+                </p>
+
+                <p>
+                    <input type="checkbox" data-toggle="true" name="check-3" value="6" class="lcs_check lcs_tt1" checked/>
+                </p>
+            </div>
+            <div class="col-xs-6">
+                <h4>Radios</h4>
+
+                <p>
+                    <input type="radio" data-toggle="true" data-labels="true" data-textOn="Off" data-textOff="On"  name="radio-1" class="lcs_check lcs_tt2" />
+                </p>
+
+                <p>
+                    <input type="radio" data-toggle="true" name="radio-1" class="lcs_check lcs_tt2" disabled/>
+                </p>
+
+                <p>
+                    <input type="radio" data-toggle="true" name="radio-1" class="lcs_check lcs_tt2" checked/>
+                </p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="page-footer">
+    <div class="row">
+        <div class="col-xs-12">
+            <ul class="footer-links">
+                <li><a href="https://github.com/hypefactory/frontend-starter-kit">GitHub</a></li>
+                <li><a href="https://twitter.com/HypefactoryOff">Twitter</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4 start-md">
+            <p>Copyright © 2018 Hypefactory. All rights reserved.</p>
+        </div>
+        <div class="col-xs-4 middle-md">
+            Designed and built with all the love in the world by <a href="https://twitter.com/HypefactoryOff"
+                                                                    target="_blank" rel="noopener">@HypefactoryOff</a>.
+        </div>
+        <div class="col-xs-4 end-md">
+            <p>Currently v0.1.0. - Code licensed <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE"
+                                                    target="_blank" rel="license noopener">MIT</a>.</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
