@@ -310,9 +310,7 @@
             $.each(me.opts, function (key) {
                 if (ignoreList.indexOf(key) !== -1) return;
 
-                attr = me.$el.attr('data-' + key);
-
-                //console.log(key + ':', attr);
+                attr = me.$el.attr('data-' + me.toDashCase(key));
 
                 if (typeof attr === 'undefined') return true;
 
@@ -324,6 +322,22 @@
             $.publish('plugin/' + me._name + '/onDataAttributes', [ me.$el, me.opts ]);
 
             return me.opts;
+        },
+
+        /**
+         * Returns Converted Camel Case String.
+         *
+         * @param {String} str - Camel Case String to Convert.
+         * @returns {String}
+         */
+        toDashCase: function (str) {
+            return str.replace(/[^a-zA-Z0-9]+/g, '-')
+                .replace(/([A-Z]+)([A-Z][a-z])/g, '$1-$2')
+                .replace(/([a-z])([A-Z])/g, '$1-$2')
+                .replace(/([0-9])([^0-9])/g, '$1-$2')
+                .replace(/([^0-9])([0-9])/g, '$1-$2')
+                .replace(/-+/g, '-')
+                .toLowerCase();
         }
     };
 
