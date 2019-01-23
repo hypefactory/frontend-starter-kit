@@ -113,9 +113,7 @@
         scrollToElement: function ($targetEl, offset) {
             var me = this;
 
-            if (!$targetEl.length) {
-                return;
-            }
+            if (!$targetEl.length) return;
 
             $.publish('plugin/hfScrollAnimate/onScrollToElement', [ me, $targetEl, offset ]);
 
@@ -138,6 +136,7 @@
                 },
                 me.opts.animationSpeed,
                 me.opts.easing,
+
                 function() {
                     $.publish('plugin/hfScrollAnimate/onScrollEnd', [ me, position ]);
                 }

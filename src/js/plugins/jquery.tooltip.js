@@ -96,8 +96,8 @@
             // Document Events
             $(document).on('keydown', $.proxy(me._onKeyDownDocument, me));
             $(document).on('keyup', me._onKeyUpDocument, me);
-            $(document).on('keyup', me._onFocusDocument, me);
-            $(document).on('keyup', me._onBlurDocument, me);
+            $(document).on('focus', me._onFocusDocument, me);
+            $(document).on('blur', me._onBlurDocument, me);
 
             $.publish('plugin/hfTooltip/onRegisterEvents', [ me ]);
         },
@@ -197,10 +197,7 @@
                 containerRect = container.getBoundingClientRect();
 
             // If body element is smaller than viewport, use viewport height instead.
-            var containerBottom =
-                container === document.body
-                    ? Math.max(containerRect.bottom, window.innerHeight)
-                    : containerRect.bottom,
+            var containerBottom = container === document.body ? Math.max(containerRect.bottom, window.innerHeight) : containerRect.bottom,
                 scrollLeft = container.scrollLeft,
                 scrollTop = container.scrollTop;
 
@@ -210,15 +207,13 @@
             // Check for container and viewport for each edge
             if (scrolledX < containerRect.left + offset || scrolledX < offset) edges.left = true;
 
-            if (
-                scrolledX + bounding.width > containerRect.right - offset ||
+            if (scrolledX + bounding.width > containerRect.right - offset ||
                 scrolledX + bounding.width > window.innerWidth - offset
             ) edges.right = true;
 
             if (scrolledY < containerRect.top + offset || scrolledY < offset) edges.top = true;
 
-            if (
-                scrolledY + bounding.height > containerBottom - offset ||
+            if (scrolledY + bounding.height > containerBottom - offset ||
                 scrolledY + bounding.height > window.innerHeight - offset
             ) edges.bottom = true;
 

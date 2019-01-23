@@ -48,6 +48,8 @@
         .addPlugin('*[data-tooltip="true"]', 'hfTooltip')
 
         .addPlugin('*[data-toggle="true"]', 'hfToggle')
+
+        .addPlugin('*[data-stacked-cards="true"]', 'hfStackedCards')
     ;
 
     /*$(function($) {

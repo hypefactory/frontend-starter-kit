@@ -122,6 +122,13 @@
             font-size: 11px;
         }
 
+        .loader-bg {
+            background-color: #333;
+            padding: 25px;
+            position: relative;
+            height: 250px;
+        }
+
         .footer-links {
             padding-left: 0;
             margin-bottom: 1rem;
@@ -212,26 +219,72 @@
 
     <section id="typography" class="container-fluid page-section">
         <div class="row">
-            <div class="col-sx-12">
-                <h2>Typography</h2>
+            <div class="col-xs-12">
+                <h2>Basic Typography</h2>
                 <p>Examples for Starter Kit - Frontend typography, including headings, body text, lists.</p>
+            </div>
+
+            <div class="col-xs-12 basic-typography">
+                <h1>Headline 1</h1>
+                <h2>Headline 2</h2>
+                <h3>Headline 3</h3>
+                <h4>Headline 4</h4>
+                <h5>Headline 5</h5>
+                <h6>Headline 6</h6>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa dolorem ex excepturi, maxime mollitia
+                    necessitatibus neque nesciunt perferendis possimus, praesentium quaerat repellendus totam, voluptatum?
+                    Assumenda delectus deserunt dolorum quos veniam.</p>
             </div>
         </div>
 
-        <div class="typography">
-            <h1>Headline 1</h1>
-            <h2>Headline 2</h2>
-            <h3>Headline 3</h3>
-            <h4>Headline 4</h4>
-            <h5>Headline 5</h5>
-            <h6>Headline 6</h6>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa dolorem ex excepturi, maxime mollitia
-                necessitatibus neque nesciunt perferendis possimus, praesentium quaerat repellendus totam, voluptatum?
-                Assumenda delectus deserunt dolorum quos veniam.</p>
+        <div class="row">
+            <div class="col-xs-12">
+                <h2>Main Typography</h2>
+                <p>Examples for Starter Kit - Frontend typography, including headings, body text, lists.</p>
+            </div>
+
+            <div class="col-xs-12">
+                <p class="typography-headline-standalone">Headline Standalone</p>
+                <p class="typography-headline-super">Headline Super</p>
+                <p class="typography-headline-elevated">Headline Elevated</p>
+                <p class="typography-headline">Headline</p>
+                <p class="typography-headline-reduced">Headline Reduced</p>
+                <p class="typography-eyebrow-super">Eyebrow Super</p>
+                <p class="typography-eyebrow">Eyebrow</p>
+                <p class="typography-callout">Callout</p>
+                <p class="typography-intro-elevated">Intro Elevated</p>
+                <p class="typography-intro"></p>
+                <p class="typography-manifesto">Manifesto</p>
+                <p class="typography-label">Label</p>
+                <p class="typography-tout">Tout</p>
+                <p class="typography-body">Body</p>
+                <p class="typography-body-reduced">Body reduced</p>
+                <p class="typography-caption">Caption</p>
+                <p class="typography-quote">Quote</p>
+                <p class="typography-quote-custom">Quote Custom</p>
+                <p class="typography-quote-reduced">Quote reduced</p>
+                <p class="typography-sosumi">Sosumi</p>
+            </div>
         </div>
 
         <div class="row">
-            <div class="col-sx-12">
+            <div class="col-xs-12">
+                <h2>Product Typography</h2>
+                <p>Examples for Starter Kit - Frontend typography, including headings, body text, lists.</p>
+            </div>
+            <div class="col-xs-12">
+                <p class="typography-eyebrow-product-elevated">Eyebrow Product Elevated</p>
+                <p class="typography-eyebrow-product">Eyebrow Product</p>
+                <p class="typography-eyebrow-product-reduced">Eyebrow Product reduced</p>
+                <p class="typography-intro-product-super">Intro Product Super</p>
+                <p class="typography-intro-product-elevated">Intro Product Elevated</p>
+                <p class="typography-intro-product">Intro Product</p>
+                <p class="typography-intro-product-reduced">Intro Product reduced</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12">
                 <h3>Inline Elements</h3>
                 <p>
                     Styling for common inline HTML5 elements.
@@ -272,25 +325,25 @@
 
         <div class="col-sx-12" style="margin-bottom:1rem;">
             <a class="btn">Basic</a>
-            <a class="btn is--link">Link</a>
-            <a class="btn is--primary">Primary</a>
-            <a class="btn is--secondary">Secondary</a>
+            <a class="btn is&#45;&#45;link">Link</a>
+            <a class="btn is&#45;&#45;primary">Primary</a>
+            <a class="btn is&#45;&#45;secondary">Secondary</a>
         </div>
 
         <div class="col-sx-12" style="margin-bottom:1rem;">
-            <a class="btn is--large">Large button</a>
-            <a class="btn is--medium">Medium button</a>
-            <a class="btn is--small">Small button</a>
+            <a class="btn is&#45;&#45;large">Large button</a>
+            <a class="btn is&#45;&#45;medium">Medium button</a>
+            <a class="btn is&#45;&#45;small">Small button</a>
         </div>
 
         <div class="col-sx-12" style="margin-bottom:1rem;">
-            <a class="btn is--full">Full button</a>
-            <a class="btn is--full is--center" style="margin-top: 10px;">Centered button</a>
+            <a class="btn is&#45;&#45;full">Full button</a>
+            <a class="btn is&#45;&#45;full is&#45;&#45;center" style="margin-top: 10px;">Centered button</a>
         </div>
 
         <div class="col-sx-12" style="margin-bottom:1rem;">
             <button class="btn">Basic button</button>
-            <button class="btn is--disabled">Disabled button</button>
+            <button class="btn is&#45;&#45;disabled">Disabled button</button>
         </div>
 
         <div class="row">
@@ -304,10 +357,10 @@
         </div>
 
         <div class="col-sx-12">
-            <p class="alert is--success alert--content">Success Message</p>
-            <p class="alert is--info">Info Message</p>
-            <p class="alert is--warning">Warning Message</p>
-            <p class="alert is--error">Error Message</p>
+            <p class="alert is&#45;&#45;success alert&#45;&#45;content">Success Message</p>
+            <p class="alert is&#45;&#45;info">Info Message</p>
+            <p class="alert is&#45;&#45;warning">Warning Message</p>
+            <p class="alert is&#45;&#45;error">Error Message</p>
         </div>
 
         <div class="row">
@@ -336,10 +389,10 @@
         </div>
 
         <div class="col-sx-12" style="margin-bottom:1rem;">
-            <span class="label is--outlined success">Success!</span>
-            <span class="label is--outlined info">Info!</span>
-            <span class="label is--outlined warning">Warning!</span>
-            <span class="label is--outlined error">Error!</span>
+            <span class="label is&#45;&#45;outlined success">Success!</span>
+            <span class="label is&#45;&#45;outlined info">Info!</span>
+            <span class="label is&#45;&#45;outlined warning">Warning!</span>
+            <span class="label is&#45;&#45;outlined error">Error!</span>
         </div>
 
         <div class="row">
@@ -392,14 +445,32 @@
         </div>
 
         <div class="col-xs-12">
-            <p><span class="badge is--primary">1</span> Primary Badge</p>
-            <p><span class="badge is--secondary">2</span> Secondary Badge</p>
-            <p><span class="badge is--minimal">3</span> Minimal Badge</p>
+            <p><span class="badge is&#45;&#45;primary">1</span> Primary Badge</p>
+            <p><span class="badge is&#45;&#45;secondary">2</span> Secondary Badge</p>
+            <p><span class="badge is&#45;&#45;minimal">3</span> Minimal Badge</p>
+        </div>
+
+        <div class="row">
+            <div class="col-sx-12">
+                <h2>Loader</h2>
+                <p>
+                    Using the contextual classes on an a-tag element quickly provide actionable badges with hover and
+                    focus states.
+                </p>
+            </div>
+
+
+            <div class="col-xs-12 loader-bg">
+                <div class="loader-circle"></div>
+                <div class="loader-line-mask">
+                    <div class="loader-line"></div>
+                </div>
+            </div>
         </div>
 
 
         <div class="row">
-            <div class="col-sx-12">
+            <div class="col-xs-12">
                 <h2>Violator</h2>
                 <p>
                     Using the contextual classes on an a-tag element quickly provide actionable badges with hover and
@@ -424,36 +495,36 @@
         </div>
 
         <div class="col-xs-12">
-            <ul class="list--unordered">
+            <ul class="list&#45;&#45;unordered">
                 <li>Default list</li>
             </ul>
 
-            <ul class="list--unordered is--checked">
-                <li>is--checked</li>
+            <ul class="list&#45;&#45;unordered is&#45;&#45;checked">
+                <li>is&#45;&#45;checked</li>
             </ul>
 
-            <ul class="list--unordered is--disc">
-                <li>is--disc</li>
+            <ul class="list&#45;&#45;unordered is&#45;&#45;disc">
+                <li>is&#45;&#45;disc</li>
             </ul>
 
-            <ul class="list--unordered is--arrow-right">
-                <li>is--arrow-right</li>
+            <ul class="list&#45;&#45;unordered is&#45;&#45;arrow-right">
+                <li>is&#45;&#45;arrow-right</li>
             </ul>
 
-            <ul class="list--unordered is--star">
-                <li>is--star</li>
+            <ul class="list&#45;&#45;unordered is&#45;&#45;star">
+                <li>is&#45;&#45;star</li>
             </ul>
 
-            <ul class="list--unordered is--cross">
-                <li>is--cross</li>
+            <ul class="list&#45;&#45;unordered is&#45;&#45;cross">
+                <li>is&#45;&#45;cross</li>
             </ul>
 
-            <ul class="list--unordered is--tag">
-                <li>is--tag</li>
+            <ul class="list&#45;&#45;unordered is&#45;&#45;tag">
+                <li>is&#45;&#45;tag</li>
             </ul>
 
-            <ul class="list--unordered is--plus">
-                <li>is--plus</li>
+            <ul class="list&#45;&#45;unordered is&#45;&#45;plus">
+                <li>is&#45;&#45;plus</li>
             </ul>
         </div>
 
@@ -560,11 +631,16 @@
                                 <div id="textAreaExample-warn" class="form-message-warning"></div>
                             </div>
                         </div>
+
+
+                        <div class="form-element">
+                            <input id="search" type="search" role="combobox" aria-owns="cities" aria-autocomplete="list" autocomplete="off" autocorrect="off" data-autoglobalsearch-module="retail-locator" results="0" placeholder="City and State or Zip" class="global-retail-search block" required="">
+                        </div>
                     </div>
                 </fieldset>
                 <div class="as-signin-button">
                     <button id="signin-button-submit" type="button"
-                            class="btn is--center is--primary button-block form-button">
+                            class="btn is&#45;&#45;center is&#45;&#45;primary button-block form-button">
                         <span aria-hidden="true">Submit Button</span>
                     </button>
                 </div>
@@ -767,50 +843,50 @@
 
         <div class="col-sx-12">
             <div class="accordions" data-accordion="true" data-open-single="true">
-                <ul class="accordions--list">
-                    <li class="accordion--item">
-                        <div class="accordion--heading">
-                            <h2 class="accordion--header">
-                                <button class="accordion--button" data-target="#productInformations" data-self-close="true">
-                                    <span class="accordion--title">Product Informations</span>
-                                    <span class="accordion--icon"></span>
+                <ul class="accordions&#45;&#45;list">
+                    <li class="accordion&#45;&#45;item">
+                        <div class="accordion&#45;&#45;heading">
+                            <h2 class="accordion&#45;&#45;header">
+                                <button class="accordion&#45;&#45;button" data-target="#productInformations" data-self-close="true">
+                                    <span class="accordion&#45;&#45;title">Product Informations</span>
+                                    <span class="accordion&#45;&#45;icon"></span>
                                 </button>
                             </h2>
                         </div>
-                        <div class="accordion--content" id="productInformations">
-                            <div class="accordion--content-inner">
+                        <div class="accordion&#45;&#45;content" id="productInformations">
+                            <div class="accordion&#45;&#45;content-inner">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci atque explicabo facere illum impedit incidunt iusto modi, molestiae nam necessitatibus nulla numquam porro quia reprehenderit repudiandae, rerum, sapiente sequi vel!
                             </div>
                         </div>
                     </li>
 
-                    <li class="accordion--item">
-                        <div class="accordion--heading">
-                            <h2 class="accordion--header">
-                                <button class="accordion--button" data-target="#compatibility">
-                                    <span class="accordion--title">Compatibility</span>
-                                    <span class="accordion--icon"></span>
+                    <li class="accordion&#45;&#45;item">
+                        <div class="accordion&#45;&#45;heading">
+                            <h2 class="accordion&#45;&#45;header">
+                                <button class="accordion&#45;&#45;button" data-target="#compatibility">
+                                    <span class="accordion&#45;&#45;title">Compatibility</span>
+                                    <span class="accordion&#45;&#45;icon"></span>
                                 </button>
                             </h2>
                         </div>
-                        <div class="accordion--content" id="compatibility">
-                            <div class="accordion--content-inner">
+                        <div class="accordion&#45;&#45;content" id="compatibility">
+                            <div class="accordion&#45;&#45;content-inner">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus architecto at consequatur distinctio, ducimus fuga ipsum minus modi nobis quibusdam quisquam, repellendus repudiandae sunt, tempora voluptatibus. Alias delectus ducimus veniam.
                             </div>
                         </div>
                     </li>
 
-                    <li class="accordion--item">
-                        <div class="accordion--heading">
-                            <h2 class="accordion--header">
-                                <button class="accordion--button" data-target="#ratings" data-stay-open="true">
-                                    <span class="accordion--title">Ratings</span>
-                                    <span class="accordion--icon"></span>
+                    <li class="accordion&#45;&#45;item">
+                        <div class="accordion&#45;&#45;heading">
+                            <h2 class="accordion&#45;&#45;header">
+                                <button class="accordion&#45;&#45;button" data-target="#ratings" data-stay-open="true">
+                                    <span class="accordion&#45;&#45;title">Ratings</span>
+                                    <span class="accordion&#45;&#45;icon"></span>
                                 </button>
                             </h2>
                         </div>
-                        <div class="accordion--content" id="ratings">
-                            <div class="accordion--content-inner">
+                        <div class="accordion&#45;&#45;content" id="ratings">
+                            <div class="accordion&#45;&#45;content-inner">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam cupiditate expedita ipsam ipsum nemo perferendis ut veniam veritatis voluptate! At consequatur dolores, eligendi eveniet excepturi magnam nostrum odit quae unde.
                             </div>
                         </div>
@@ -829,46 +905,36 @@
             </div>
         </div>
         <div class="col-sx-12">
-            <!-- Tabs-->
             <div class="tabs" data-tabs="true">
-                <!-- Tabs Header-->
                 <div class="tabs-header">
-                    <!-- Tabs-->
                     <ul>
-                        <li class="is--active"><a href="#tab-1" tab-id="1">Tab 1</a></li>
+                        <li class="is&#45;&#45;active"><a href="#tab-1" tab-id="1">Tab 1</a></li>
                         <li><a href="#tab-2" tab-id="2">Tab 2</a></li>
                         <li><a href="#tab-3" tab-id="3">Tab 3</a></li>
                         <li><a href="#tab-4" tab-id="4">Tab 4</a></li>
                         <li><a href="#tab-5" tab-id="5">Tab 5</a></li>
                     </ul>
                 </div>
-                <!-- Border-->
                 <div class="border"></div>
-                <!-- Tabs Content-->
                 <div class="tabs-content">
-                    <!-- Tab - Active-->
-                    <div class="tab is--active" tab-id="1">1. Donec ullamcorper nulla non metus auctor fringilla. Aenean
+                    <div class="tab is&#45;&#45;active" tab-id="1">1. Donec ullamcorper nulla non metus auctor fringilla. Aenean
                         eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Curabitur blandit tempus
                         porttitor. Ellentesque ornare sem lacinia quam venenatis vestibulum. Curabitur blandit tempus
                         porttitor.
                     </div>
-                    <!-- Tab-->
                     <div class="tab" tab-id="2">2. Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo
                         quam.
                     </div>
-                    <!-- Tab-->
                     <div class="tab" tab-id="3">3. Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo
                         quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Curabitur blandit tempus
                         porttitor.
                     </div>
-                    <!-- Tab-->
                     <div class="tab" tab-id="4">4. Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo
                         quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Curabitur blandit tempus
                         porttitor. Maecenas faucibus mollis interdum. Donec ullamcorper nulla non metus auctor
                         fringilla. Aenean lacinia bibendum nulla sed consectetur. Aenean lacinia bibendum nulla sed
                         consectetur.
                     </div>
-                    <!-- Tab-->
                     <div class="tab" tab-id="5">5. Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo
                         quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Curabitur blandit tempus
                         porttitor.Cras mattis consectetur purus sit amet fermentum. Maecenas sed diam eget risus varius
@@ -901,7 +967,7 @@
         </div>
 
         <div class="col-sx-12">
-            <!-- TODO: Make on Magical Image if it is zoomed load 2x image - https://www.html5rocks.com/en/tutorials/responsive/picture-element/-->
+            &lt;!&ndash; TODO: Make on Magical Image if it is zoomed load 2x image - https://www.html5rocks.com/en/tutorials/responsive/picture-element/&ndash;&gt;
             <picture class="responsive-img">
                 <img class="image-zoom"
                      data-image-zoom="true"
@@ -922,10 +988,10 @@
         </div>
 
         <div class="col-sx-12">
-            <a href="#" class="btn is--primary" data-tooltip="true" data-html="true" data-position="bottom" data-content="I am a tooltip">Bottom</a>
-            <a href="#" class="btn is--primary" style="margin-left: 2rem" data-tooltip="true" data-position="top" data-content="I am a tooltip"> Top</a>
-            <a href="#" class="btn is--primary" style="margin-left: 2rem" data-tooltip="true" data-position="left" data-content="I am a tooltip"> Left</a>
-            <a href="#" class="btn is--primary" style="margin-left: 2rem" data-tooltip="true" data-position="right" data-content="I am a tooltip"> Right</a>
+            <a href="#" class="btn is&#45;&#45;primary" data-tooltip="true" data-html="true" data-position="bottom" data-content="I am a tooltip">Bottom</a>
+            <a href="#" class="btn is&#45;&#45;primary" style="margin-left: 2rem" data-tooltip="true" data-position="top" data-content="I am a tooltip"> Top</a>
+            <a href="#" class="btn is&#45;&#45;primary" style="margin-left: 2rem" data-tooltip="true" data-position="left" data-content="I am a tooltip"> Left</a>
+            <a href="#" class="btn is&#45;&#45;primary" style="margin-left: 2rem" data-tooltip="true" data-position="right" data-content="I am a tooltip"> Right</a>
         </div>
 
         <div class="row">
@@ -980,38 +1046,37 @@
                 </p>
             </div>
 
+
             <div class="col-xs-12">
                 <div class="section section-cards">
                     <div class="section-content">
-                        <h2 class="typography-headline-elevated headline">It’s as easy<br>as it sounds.</h2>
+                        <h2 class="typography-headline-elevated headline">It’s as easy as it looks. <br> but not so easy
+                            to develop.</h2>
                         <div class="cards-wrapper">
                             <ul class="stacked-cards" data-stacked-cards="true">
                                 <li class="card-01">
                                     <figure class="card-container">
                                         <div class="bg"></div>
                                         <div class="card">
-                                            <h3 tabindex="0" class="typography-eyebrow-super card-headline large-8 large-centered small-9">Discover songs you’ll love from music picked&nbsp;just for you.</h3>
+                                            <h3 tabindex="0"
+                                                class="typography-eyebrow-super card-headline large-8 large-centered small-9">
+                                                Card-01 <br> Headline.</h3>
                                             <div class="device-lockup">
                                                 <figure class="image-screen"></figure>
                                                 <figure class="image-hardware"></figure>
-                                                <figure class="image-airpod-left" style="transform: translate(0px, 0px);"></figure>
-                                                <figure class="image-airpod-right" style="transform: translate(0px, 0px);"></figure>
                                             </div>
                                         </div>
                                     </figure>
                                 </li>
-
                                 <li class="card-02">
                                     <figure class="card-container">
                                         <div class="bg"></div>
                                         <div class="card">
-                                            <h3 tabindex="0" class="typography-eyebrow-super card-headline large-8 large-centered small-9">Quickly browse an artist’s latest tracks and collaborations.</h3>
+                                            <h3 tabindex="0"
+                                                class="typography-eyebrow-super card-headline large-8 large-centered small-9">
+                                                Card-02 <br> Headline.</h3>
                                             <div class="device-lockup">
-                                                <figure class="image-screen-left"></figure>
-                                                <figure class="image-screen-center">
-                                                    <div class="screen-anim mediaobject-enhanced mediaobject-playing" data-component-list="InlineAnimationComponent" data-anim-container="" data-anim-locale="us" data-anim-filename="anim/artist-page" data-anim-options="{&quot;start&quot;:&quot;-55vh&quot;, &quot;end&quot;:&quot;-50vh + 230px&quot;, &quot;replay&quot;:true}" data-anim-options-s="{&quot;start&quot;:&quot;-55vh&quot;, &quot;end&quot;:&quot;-50vh + 230px&quot;}" aria-hidden="true"><video muted="" playsinline="" class="mediaobject-ios-inline-video mediaobject-element" src="/105/media/us/apple-music/2018/a30d5a32-e9e4-42d8-92a4-31c006ae8067/anim/artist-page/large.mp4" style="visibility: visible;"></video></div>
-                                                </figure>
-                                                <figure class="image-screen-right"></figure>
+                                                <figure class="image-screen"></figure>
                                                 <figure class="image-hardware"></figure>
                                             </div>
                                         </div>
@@ -1021,17 +1086,84 @@
                                     <figure class="card-container">
                                         <div class="bg"></div>
                                         <div class="card">
-                                            <h3 tabindex="0" class="typography-eyebrow-super card-headline large-8 large-centered small-9">Get the perfect playlist for any&nbsp;mood with just a tap.</h3>
+                                            <h3 tabindex="0"
+                                                class="typography-eyebrow-super card-headline large-8 large-centered small-9">
+                                                Card-03 <br> Headline.</h3>
                                             <div class="device-lockup">
+                                                <figure class="image-screen"></figure>
                                                 <figure class="image-hardware"></figure>
-                                                <figure class="image-airpod-left" style="transform: translate(0px, 40px);"></figure>
-                                                <figure class="image-airpod-right" style="transform: translate(0px, 85px);"></figure>
+                                            </div>
+                                        </div>
+                                    </figure>
+                                </li>
+                                <li class="card-04">
+                                    <figure class="card-container">
+                                        <div class="bg"></div>
+                                        <div class="card">
+                                            <h3 tabindex="0"
+                                                class="typography-eyebrow-super card-headline large-7 large-centered small-8">
+                                                Card-04 <br> Headline.</h3>
+                                            <div class="device-lockup">
+                                                <figure class="image-screen"></figure>
+                                                <figure class="image-hardware"></figure>
+                                            </div>
+                                        </div>
+                                    </figure>
+                                </li>
+                                <li class="card-05">
+                                    <figure class="card-container">
+                                        <div class="bg"></div>
+                                        <div class="card">
+                                            <h3 tabindex="0"
+                                                class="typography-eyebrow-super card-headline large-8 large-centered small-9">
+                                                Card-05 <br> Headline.</h3>
+                                            <div class="device-lockup">
+                                                <figure class="image-screen"></figure>
+                                                <figure class="image-hardware"></figure>
+                                            </div>
+                                        </div>
+                                    </figure>
+                                </li>
+                                <li class="card-06">
+                                    <figure class="card-container">
+                                        <div class="bg"></div>
+                                        <div class="card">
+                                            <h3 tabindex="0"
+                                                class="typography-eyebrow-super card-headline large-8 large-centered small-9">
+                                                Card-06 <br> Headline.</h3>
+                                            <div class="device-lockup">
+                                                <figure class="image-screen"></figure>
+                                                <figure class="image-hardware"></figure>
                                             </div>
                                         </div>
                                     </figure>
                                 </li>
                             </ul>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="additional" class="container-fluid page-section">
+        <div id="ScrollSpy" class="row">
+            <div class="col-xs-12">
+                <h3>Scrollspy</h3>
+                <p>
+                    Using the contextual classes on an a-tag element quickly provide actionable badges with hover and
+                    focus states.
+                </p>
+            </div>
+
+            <div class="col-xs-12">
+                <div class="row">
+                    <div class="col-xs-3">
+
+                    </div>
+
+                    <div class="col-xs-9">
+
                     </div>
                 </div>
             </div>
